@@ -21,7 +21,7 @@ description: |
   - Authoring exact interface strings (owned by `ux-writing`) — creative direction may review these for
     conformance without authoring them.
   - Production implementation or independent technical/behavioural/accessibility verification (owned by
-    `software-development`, `testing-and-verification`).
+    `software-development`/`frontend-development`, `testing-and-verification`).
   - Purely mechanical, invisible, or minor local work that cannot materially affect the established expressive
     identity.
 ---
@@ -481,7 +481,7 @@ visual-design / ux-writing / copywriting
     ↓
 creative-conformance specification review
     ↓
-software-development
+software-development baseline + frontend-development specialist execution (when the implementation is a frontend surface)
     ↓
 testing-and-verification + rendered creative review
     ↓
@@ -495,7 +495,7 @@ Rendered creative review:
   implementation;
 - routes revisions to the responsible discipline (`creative-direction` itself if the brief was insufficient,
   `visual-design`/`ux-writing`/`copywriting` if the specification was the point of loss,
-  `software-development` if implementation diverged from a faithful specification);
+  `software-development`/`frontend-development` if implementation diverged from a faithful specification);
 - does not modify production code;
 - does not own behavioural testing, technical correctness, accessibility verification, performance verification,
   or implementation evidence — those remain owned by `testing-and-verification`;
@@ -663,7 +663,8 @@ constraints — never the reverse.
 > All named products, briefs, storage paths, and references not already present in this repository are
 > hypothetical. The repository currently contains `skill-authoring-standard`, `task-framing`,
 > `software-development`, `testing-and-verification`, `product-design`, `visual-design`, `ux-writing`,
-> `creative-direction`, and `copywriting`. The example product used below (`FieldNotes`, a volunteer ecological
+> `creative-direction`, `copywriting`, and `frontend-development`. The example product used below (`FieldNotes`, a
+> volunteer ecological
 > field-monitoring app) is invented solely for these examples and is unrelated to any product referenced by other
 > skill files.
 
@@ -737,9 +738,9 @@ constraints — never the reverse.
   visual structure specified.
 - **Attribution**: Fidelity loss occurred in implementation, not in the brief or the specification. The approved
   brief criterion is left unchanged rather than reinterpreted to fit the shipped result.
-- **Routing**: Return to `software-development` with the specific divergence from the approved specification.
-  `testing-and-verification` separately confirms behavioural correctness of the same implementation; the two
-  verdicts are independent.
+- **Routing**: Return to `software-development`/`frontend-development` with the specific divergence from the
+  approved specification. `testing-and-verification` separately confirms behavioural correctness of the same
+  implementation; the two verdicts are independent.
 
 ### Example 8: Request Blocked by Unresolved Brand Identity / Positioning Authority
 - **Task**: "Give the product a distinctive creative identity for its public launch."

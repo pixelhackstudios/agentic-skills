@@ -134,7 +134,7 @@ When evidence conflicts, use the source with the most direct authority over the 
 ## Concrete Usage Examples: Framing Modes
 
 > [!NOTE]
-> All named execution skills and resource paths in these examples are hypothetical unless explicitly identified as an installed skill. The repository currently contains `skill-authoring-standard`, `task-framing`, `software-development`, `testing-and-verification`, `product-design`, `visual-design`, `ux-writing`, `creative-direction`, and `copywriting`.
+> All named execution skills and resource paths in these examples are hypothetical unless explicitly identified as an installed skill. The repository currently contains `skill-authoring-standard`, `task-framing`, `software-development`, `testing-and-verification`, `product-design`, `visual-design`, `ux-writing`, `creative-direction`, `copywriting`, and `frontend-development`.
 
 ### Example 1: Internal Frame Mode (Theme Toggle)
 - **Task**: "Add a theme toggle button to the navbar."
@@ -173,7 +173,7 @@ When evidence conflicts, use the source with the most direct authority over the 
   - `creative-direction` establishes the overall expressive thesis for the page.
   - `product-design`, narrowly, defines only the signup form's behaviour: submit action, validation states, success state, failure/recovery state.
   - `visual-design` and `ux-writing`/`copywriting` each consume the applicable approved output from both branches — `visual-design` applies the creative thesis to the page's overall composition and the approved form states to that one element; `ux-writing` writes the signup form's validation/error copy from product-design's states; `copywriting` writes the surrounding headline and persuasive copy from the creative thesis.
-  - Both branches then proceed to `software-development` and `testing-and-verification`.
+  - Both branches then proceed to `software-development`/`frontend-development` and `testing-and-verification`.
 - **Unresolved Material Decisions**: None.
 - **Note**: Do not route the whole page through `product-design` first merely because it contains a form; do not route the form's behaviour through `creative-direction` merely because the page is expressive.
 

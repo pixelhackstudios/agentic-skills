@@ -26,12 +26,12 @@ This skill governs the independent planning, execution, and reporting of tests a
 
 ## Responsibility Boundaries
 - **Primary Responsibility**: Independent verification planning, selecting proportionate checks, reviewing implementation diffs, executing automated and manual checks, writing tests/reproductions, identifying unsupported completion claims, and classifying/reporting defects.
-- **Adjacent Responsibilities**: Consumes task frames from `task-framing` and completion reports/diffs from `software-development`.
+- **Adjacent Responsibilities**: Consumes task frames from `task-framing` and completion reports/diffs from `software-development`, including `frontend-development`'s specialist execution and self-validation evidence for frontend surfaces.
 - **Explicit Exclusions**: Does not perform initial cross-disciplinary task framing, product/workflow design, copywriting, independent quality policy definition, deployment authorization, or material architectural, dependency, schema, or security decisions that were not pre-authorized.
   - Approved design references, copy, schemas, contracts, and product specifications may serve as controlling evidence. This skill verifies against them but does not redefine or implement them.
   - Excludes editorial and public-copy decisions, security-policy decisions, licensing and cost decisions, dependency selection, and changes to expected results that are not already authorized.
   - It does not accept existing test passes as proof of untested behaviour.
-- **Handoff Conditions**: If production repair is required, report the defect and hand back to `software-development`. If verification is complete, hand the final verification verdict to the user or subsequent workflow.
+- **Handoff Conditions**: If production repair is required, report the defect and hand back to the responsible discipline (`software-development`, or the applicable specialist such as `frontend-development` within its delegated domain). If verification is complete, hand the final verification verdict to the user or subsequent workflow.
 
 ## Activation and Non-Activation Conditions
 - **Activation**: Triggers when independently verifying a completed implementation, a reported defect or regression, an existing behavioural claim, or acceptance criteria, integration behaviour, visual interaction, or completion evidence.
@@ -133,7 +133,7 @@ Before claiming completion of verification or handing off:
 - **On Failure**:
   - Correct mechanical defects only in verification artifacts created during the current pass.
   - Do not repair production code or production configuration.
-  - Classify production defects and hand them to `software-development`.
+  - Classify production defects and hand them to the responsible discipline (`software-development`, or the applicable specialist such as `frontend-development` within its delegated domain).
   - If a pre-existing test defect prevents meaningful verification, report it and modify it only when explicit authority permits.
   - Do not automatically stop because a check fails; classify the result and determine whether other meaningful verification remains possible.
   - Preserve valid test artifacts and evidence.
@@ -195,7 +195,7 @@ Report the observable consequence. Use severity labels only when the project sup
 6. **Evidence**: Command outputs, error logs, or screenshot references.
 7. **Consequence**: Impact on user experience, security, or stability.
 8. **Origin**: New, pre-existing, or uncertain.
-9. **Recommended Handoff**: Target discipline (e.g., `software-development` or `backend-development`).
+9. **Recommended Handoff**: Target discipline (e.g., `software-development`, `frontend-development`, or `backend-development`).
 
 ## Concrete Usage Examples
 

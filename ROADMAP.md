@@ -25,6 +25,7 @@ The foundational architecture is installed and considered stable:
 - `ux-writing`
 - `copywriting`
 - `software-development`
+- `frontend-development`
 - `testing-and-verification`
 
 The current framework provides:
@@ -36,6 +37,7 @@ The current framework provides:
 - visual specification;
 - interface language;
 - general software implementation;
+- specialist frontend implementation, jointly activated with general software implementation;
 - independent, evidence-backed verification.
 
 The foundation should not be broadly redesigned unless real use exposes a concrete defect.
@@ -96,9 +98,9 @@ It will not:
 
 ## Milestone 2 — Frontend Development
 
-**Status:** Next
+**Status:** Completed
 
-Create:
+Created:
 
 ```text
 .agents/skills/frontend-development/SKILL.md
@@ -160,10 +162,13 @@ It will not:
 
 ## Milestone 3 — Authored Interaction and Motion
 
-**Status:** Planned, scope to be validated during frontend work
+**Status:** Active validation pending during real frontend implementation
 
-The first implementation should determine whether authored motion belongs inside `frontend-development` or
-requires a separate specialist skill.
+`frontend-development` implements approved motion within its own scope as a distinct, separable section (see
+its Motion Implementation section) so that a future independent motion skill could be split out without
+restructuring the rest of that file. Installing `frontend-development` does not resolve whether authored motion
+belongs inside it permanently or requires a separate specialist skill — that determination still requires real
+implementation evidence.
 
 Potential separate skill:
 
@@ -243,7 +248,7 @@ At minimum:
 - Did the framework increase quality without creating procedural drag?
 - Could another agent follow the skills without hidden conversational context?
 
-Only concrete defects found during these projects should reopen the nine foundational skills.
+Only concrete defects found during these projects should reopen the ten foundational skills.
 
 ---
 
@@ -364,10 +369,9 @@ clear.
 ## Current execution order
 
 ```text
-1. Build frontend-development
-2. Validate authored interaction and motion during real implementation
-3. Run full projects through the framework
-4. Fix only concrete defects exposed by use
-5. Add lightweight repository validation tooling
-6. Prepare the first stable release
+1. Validate authored interaction and motion during real frontend implementation
+2. Run full projects through the framework
+3. Fix only concrete defects exposed by use
+4. Add lightweight repository validation tooling
+5. Prepare the first stable release
 ```

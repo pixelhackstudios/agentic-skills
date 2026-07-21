@@ -26,12 +26,12 @@ This skill governs the translation of approved product behaviour, information hi
 
 ## Responsibility Boundaries
 - **Primary Responsibility**: Defining visual hierarchy, composition/spatial organization, layout systems, typography/color application, spacing/density, component appearance, shapes/elevation, imagery treatment, responsive adaptations, state styling, and visual acceptance criteria.
-- **Adjacent Responsibilities**: Consumes product specifications from `product-design` and hands visual specifications to `software-development` and `testing-and-verification`.
+- **Adjacent Responsibilities**: Consumes product specifications from `product-design` and hands visual specifications to `software-development`/`frontend-development` and `testing-and-verification`.
 - **Explicit Exclusions**: Does not own product workflows, business rules, permissions, state transitions, product acceptance criteria, final interface copy/labels, production code implementation, or independent verification.
   - Approved design references, copy, schemas, contracts, and product specifications may serve as controlling evidence. This skill interprets and applies their visual implications but does not redefine approved product behaviour, final wording, architecture, or implementation.
   - Excludes editorial and public-copy decisions, security-policy decisions, licensing and cost decisions, dependency selection, and changes to expected results that are not already authorized.
   - Does not silently replace approved product behaviour because another arrangement appears visually preferable. Does not invent logos, fonts, palettes, illustration styles, or brand meaning when those are material unresolved decisions.
-- **Handoff Conditions**: After the visual specification is complete, hand implementation-ready visual requirements to `software-development`, supplied text requirements to UX writing when applicable, and observable visual criteria to `testing-and-verification`. Return unresolved behavioural conflicts to `product-design` and unresolved material visual decisions to `task-framing`.
+- **Handoff Conditions**: After the visual specification is complete, hand implementation-ready visual requirements to `software-development`/`frontend-development`, supplied text requirements to UX writing when applicable, and observable visual criteria to `testing-and-verification`. Return unresolved behavioural conflicts to `product-design` and unresolved material visual decisions to `task-framing`.
 
 ## Activation and Non-Activation Conditions
 - **Activation**: Triggers when translating approved requirements into layouts, composition, color, spacing, and typography systems.

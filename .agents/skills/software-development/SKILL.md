@@ -24,7 +24,7 @@ This skill governs the inspection, modification, and validation of application s
 
 ## Responsibility Boundaries
 - **Primary Responsibility**: Inspect task-relevant implementation surfaces, identify the smallest complete change, modify code/configuration within granted authority, validate changes through direct evidence, and report completion status and residual risks.
-- **Adjacent Responsibilities**: Consumes task frames from `task-framing` and generates changes that integrate with existing configurations.
+- **Adjacent Responsibilities**: Consumes task frames from `task-framing` and generates changes that integrate with existing configurations. For frontend implementation surfaces, activates jointly with the installed `frontend-development` specialist skill: this skill supplies the governing implementation baseline (scope discipline, change classification, evidence honesty, completion reporting), and `frontend-development` supplies frontend-specific execution and decisions within it. This baseline is not excluded from frontend work merely because the specialist is also active.
 - **Explicit Exclusions**: Does not perform initial cross-disciplinary task framing, product/workflow design, copywriting, independent quality policy definition, deployment authorization, or material architectural, dependency, schema, or security decisions that were not pre-authorized.
   - Design and copy skills provide controlling specifications or artifacts, while development skills implement them within granted authority.
 - **Handoff Conditions**: After implementation and validation, return the completed change and evidence to the current workflow, user review, or `testing-and-verification` when independent verification is required.
@@ -51,7 +51,7 @@ This skill governs the inspection, modification, and validation of application s
   - Performing unrelated cleanups, cosmetic edits, or opportunistic refactorings.
   - Silently making material architectural, dependency, schema, security, licensing, or cost decisions.
   - Independent test strategy, adversarial verification, broad regression design, or quality-policy decisions. These belong to `testing-and-verification`.
-  - Specialist implementation domains belong to specialist skills like `frontend-development`, `backend-development`, `database-development`, and `infrastructure-development` (hypothetical) when they exist.
+  - Specialist implementation domains belong to specialist skills operating within their delegated domain while conforming to this skill's governing baseline. `frontend-development` is installed and activates jointly with this skill for frontend implementation surfaces, per its own SKILL.md. `backend-development`, `database-development`, and `infrastructure-development` remain hypothetical until installed.
 
 ## Ordered Procedure
 1. **Confirm Frame and Authority**: Confirm a valid and executable task frame.

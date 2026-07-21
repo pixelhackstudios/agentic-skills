@@ -35,7 +35,8 @@ campaign web work are treated as two legitimate, coexisting routes, not one defa
 | [`visual-design`](.agents/skills/visual-design/SKILL.md) | Visual hierarchy, composition, typography, colour, spacing, component appearance, and responsive/state treatment. |
 | [`ux-writing`](.agents/skills/ux-writing/SKILL.md) | Exact interface language — labels, errors, validation, confirmations, empty states — within approved behaviour and voice. |
 | [`copywriting`](.agents/skills/copywriting/SKILL.md) | Promotional, persuasive, campaign, editorial, and public-facing brand-voice language — headlines, hero statements, narrative, and CTAs — within approved creative direction. |
-| [`software-development`](.agents/skills/software-development/SKILL.md) | Implementing approved, bounded software changes with scope discipline and validated evidence. |
+| [`software-development`](.agents/skills/software-development/SKILL.md) | Implementing approved, bounded software changes with scope discipline and validated evidence; supplies the governing implementation baseline `frontend-development` operates under. |
+| [`frontend-development`](.agents/skills/frontend-development/SKILL.md) | Specialist frontend implementation — markup, styles, components, responsive/client-side behaviour, server-rendered frontend concerns, accessibility mechanics, performance, and approved motion — activating jointly with `software-development`. |
 | [`testing-and-verification`](.agents/skills/testing-and-verification/SKILL.md) | Independent, evidence-backed verification of implementation claims, defects, and acceptance criteria. |
 
 ## How work routes through the skills
@@ -46,7 +47,8 @@ pipeline merely because the deliverable is a website.
 ```text
 Interactive product / application
 task-framing → product-design → creative-direction (when activated) → visual-design + ux-writing
-    → software-development → testing-and-verification
+    → software-development baseline + frontend-development specialist execution → testing-and-verification
+      (when independently required)
 
 Expressive / editorial / campaign / portfolio / public website
 task-framing
@@ -55,7 +57,8 @@ task-framing
        logic require definition
            ↓ (both branches feed forward)
     visual-design + ux-writing + copywriting
-    → software-development → testing-and-verification
+    → software-development baseline + frontend-development specialist execution → testing-and-verification
+      (when independently required)
 
 Mixed website (e.g. a campaign page with one signup form)
 task-framing
@@ -63,8 +66,15 @@ task-framing
     └─ product-design, narrowly, only for the interactive element's behaviour
            ↓ (both branches feed forward)
     visual-design + ux-writing/copywriting consume the applicable approved outputs
-    → software-development → testing-and-verification
+    → software-development baseline + frontend-development specialist execution → testing-and-verification
+      (when independently required)
 ```
+
+`frontend-development` activates jointly with `software-development` for any production change to a frontend
+implementation surface, regardless of visual ambition — `software-development` supplies the governing baseline
+(scope, classification, evidence honesty); `frontend-development` supplies frontend-specific execution and
+self-validation within it. Independent verification by `testing-and-verification` is required when the task
+frame, risk, or acceptance criteria call for it; otherwise self-validated work returns to the current workflow.
 
 `creative-direction` grounds itself in an approved `product-design` specification when one exists, or directly in
 the task's audience, communication objective, content requirements, and user-approved references when it doesn't
@@ -72,10 +82,10 @@ the task's audience, communication objective, content requirements, and user-app
 
 ## Status
 
-- Nine foundational skills installed and stable as of this writing — no further architectural changes unless
-  real use surfaces a concrete defect.
-- The next identified gap is specialist frontend implementation — particularly authored interaction and motion —
-  which is currently handled generically by `software-development`.
+- Ten foundational skills installed and stable as of this writing — no further architectural changes unless real
+  use surfaces a concrete defect.
+- Whether authored motion belongs inside `frontend-development` or warrants an independent `motion-development`
+  skill remains active validation pending during real frontend implementation — not yet resolved.
 
 ## Using these skills
 

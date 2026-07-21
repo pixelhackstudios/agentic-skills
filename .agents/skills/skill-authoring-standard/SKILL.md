@@ -125,7 +125,7 @@ When evidence conflicts, use the source with the most direct authority over the 
 Below is a concise example of using this standard to review a proposed skill (`ui-layout-guidance`):
 
 > [!NOTE]
-> All named execution skills and resource paths in this example are hypothetical. The repository currently contains `skill-authoring-standard`, `task-framing`, `software-development`, `testing-and-verification`, `product-design`, `visual-design`, `ux-writing`, `creative-direction`, and `copywriting`.
+> All named execution skills and resource paths in this example are hypothetical. The repository currently contains `skill-authoring-standard`, `task-framing`, `software-development`, `testing-and-verification`, `product-design`, `visual-design`, `ux-writing`, `creative-direction`, `copywriting`, and `frontend-development`.
 
 1. **Primary Responsibility**: Define responsive layout mechanics using Grid, Flexbox, container queries, breakpoints, and structural spacing.
 2. **Adjacent Responsibility**: Consume approved design tokens and visual specifications (e.g., from `.agents/resources/tokens.json`).

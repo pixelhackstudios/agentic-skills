@@ -50,8 +50,8 @@ promotional, persuasive, campaign, editorial, and public-facing brand-voice lang
   `product-design` behaviour and facts as the controlling source for any factual claim. Consumes supplied brand
   voice, terminology, legal-approved claims, and existing approved copy. Coordinates length and hierarchy with
   `visual-design`'s space constraints without letting fit override essential meaning. Hands implementation-ready
-  copy and its approval status to `software-development`, and observable copy acceptance criteria to
-  `testing-and-verification`. When an approved creative-direction thesis exists and `creative-direction` is
+  copy and its approval status to `software-development`/`frontend-development`, and observable copy acceptance
+  criteria to `testing-and-verification`. When an approved creative-direction thesis exists and `creative-direction` is
   activated for conformance review, submits its output to that bounded creative-conformance gate; bounded,
   task-frame-grounded copy with no thesis is not submitted to a review that does not exist.
 - **Explicit Exclusions**: Does not own interface utility copy, validation, errors, system feedback, or in-product
@@ -62,7 +62,8 @@ promotional, persuasive, campaign, editorial, and public-facing brand-voice lang
   - Approved creative-direction theses, product-design specifications, brand voice guides, and legal-approved
     claims are controlling evidence this skill executes through — it does not redefine them.
 - **Handoff Conditions**: After copy is drafted, hand implementation-ready strings and their approval status to
-  `software-development`, and observable copy acceptance criteria to `testing-and-verification`. Return unresolved
+  `software-development`/`frontend-development`, and observable copy acceptance criteria to
+  `testing-and-verification`. Return unresolved
   product-behaviour or factual-accuracy questions to `product-design`. Return unresolved brand-voice, positioning,
   naming, or claims-authorization decisions to `task-framing`. Route to `creative-direction` when a task requires
   establishing or materially changing brand voice or verbal character rather than executing within it.
@@ -146,8 +147,8 @@ promotional, persuasive, campaign, editorial, and public-facing brand-voice lang
   persuasive language, including CTAs that sit in a marketing/editorial context rather than inside a workflow.
 - `visual-design` determines presentation, space, and hierarchy; `copywriting` fits meaning within those
   constraints without silently cutting essential claims or CTAs.
-- `software-development` implements supplied copy. `testing-and-verification` independently verifies rendered
-  copy against the approved package.
+- `software-development`/`frontend-development` implements supplied copy. `testing-and-verification`
+  independently verifies rendered copy against the approved package.
 - `copywriting` must not silently establish brand voice, positioning, or product naming.
 - `creative-direction`'s conformance gate applies only when an approved thesis exists and creative direction is
   activated for review; bounded, task-frame-grounded copy is not held to a brief that does not exist.
@@ -285,9 +286,9 @@ Before claiming the copy package complete:
       authored in place of `ux-writing`.
 - [ ] **Restraint Check**: Marketing language was not forced onto a surface the grounding calls for restraint on.
 - [ ] **Space Constraint Check**: Copy fits supplied visual constraints without silently cutting a claim or CTA.
-- [ ] **Handoff Clarity**: Implementation-ready copy goes to `software-development`; acceptance criteria go to
-      `testing-and-verification`; unresolved product-fact questions go to `product-design`; unresolved
-      voice/positioning/claims-authorization decisions go to `task-framing`.
+- [ ] **Handoff Clarity**: Implementation-ready copy goes to `software-development`/`frontend-development`;
+      acceptance criteria go to `testing-and-verification`; unresolved product-fact questions go to
+      `product-design`; unresolved voice/positioning/claims-authorization decisions go to `task-framing`.
 - [ ] **Exclusions & Assumptions Check**: Assumptions and exclusions are documented.
 - [ ] **No Placeholders**: No TODOs, accidental placeholders, or unresolved drafting markers remain. Clearly
       defined metavariables (such as `<product-name>`) are permitted.
@@ -357,7 +358,7 @@ platform-level, system-level, safety, security, or tool-use requirements governi
 > Named execution skills, files, paths, products, campaigns, or brands in these examples are hypothetical unless
 > explicitly identified as an installed skill. The repository currently contains `skill-authoring-standard`,
 > `task-framing`, `product-design`, `creative-direction`, `visual-design`, `ux-writing`, `software-development`,
-> `testing-and-verification`, and `copywriting`.
+> `testing-and-verification`, `copywriting`, and `frontend-development`.
 
 ### Example 1: Campaign Headline Executed from Both an Approved Thesis and Confirmed Product Facts
 - **Task**: Write the launch-campaign headline and hero statement for a hypothetical volunteer ecological
