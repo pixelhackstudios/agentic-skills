@@ -58,7 +58,7 @@ This skill governs the initial scoping, boundary definition, and mode selection 
    - **Internal Frame**: If the task is clear, establish the frame internally and proceed without interrupting the user.
    - **Reported Frame**: If the task is complex but executable, briefly report the important boundaries in the response and proceed.
    - **Approval-Required Frame**: Stop and request a decision only when an unresolved material choice prevents valid execution.
-8. **Select Execution Destination**: Identify the downstream discipline or skill.
+8. **Select Execution Destination**: Identify the downstream discipline or skill. For a task that produces or modifies a web surface, determine whether product behaviour, workflows, information architecture, forms, transactions, permissions, or interaction-state logic are involved, and to what extent. Route the overall project according to its dominant purpose; invoke `product-design` only for the specific surfaces or behaviours that actually need workflow, state, transaction, permission, form, or interaction definition. When a task mixes an expressive or public surface with one or more bounded interactive elements, split it into parallel concerns — `creative-direction` for the overall concept, `product-design` narrowly for the interactive element's behaviour — rather than forcing the entire surface through a single sequential, product-design-led pipeline. Do not default to `product-design` merely because the deliverable is a website or contains any interactive element.
 9. **Handoff & Proceed**: Hand off or proceed according to the selected mode.
 
 ## Evidence Requirements
@@ -165,7 +165,19 @@ When evidence conflicts, use the source with the most direct authority over the 
 - **Unresolved Material Decisions**: None.
 - **Execution Destination**: Current agent workflow or `backend-development` / `software-development` skill, when such a skill exists.
 
-### Example 3: Approval-Required Frame Mode (Database Migration / Schema Modification)
+### Example 3: Creative-First Routing with Parallel Concerns (Public Campaign Page)
+- **Task**: "Build a launch page for our new product announcement. No accounts — the only interactive element is an email-signup form."
+- **Selected Mode**: **Reported Frame** (cross-disciplinary, but no unresolved material decision blocks execution).
+- **Analysis**: The page's dominant purpose is expressive/public messaging, not a transactional application. One bounded element — the email-signup form — has real workflow/state/validation behaviour (submit, validation error, success, duplicate/failure handling). The presence of that one element does not make the entire page product-design-led.
+- **Execution Destination**: Split into parallel concerns rather than one sequential pipeline:
+  - `creative-direction` establishes the overall expressive thesis for the page.
+  - `product-design`, narrowly, defines only the signup form's behaviour: submit action, validation states, success state, failure/recovery state.
+  - `visual-design` and `ux-writing`/`copywriting` (when that skill exists) each consume the applicable approved output from both branches — `visual-design` applies the creative thesis to the page's overall composition and the approved form states to that one element; `ux-writing` writes the signup form's validation/error copy from product-design's states; `copywriting` writes the surrounding headline and persuasive copy from the creative thesis.
+  - Both branches then proceed to `software-development` and `testing-and-verification`.
+- **Unresolved Material Decisions**: None.
+- **Note**: Do not route the whole page through `product-design` first merely because it contains a form; do not route the form's behaviour through `creative-direction` merely because the page is expressive.
+
+### Example 4: Approval-Required Frame Mode (Database Migration / Schema Modification)
 - **Task**: "We need to allow users to sign up with phone numbers as their primary ID instead of email."
 - **Selected Mode**: **Approval-Required Frame** (High execution risk; changes the database schema and authentication workflow).
 - **Intended Outcome**: Modify User table schema and auth configuration to accept phone numbers.

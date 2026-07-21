@@ -35,7 +35,7 @@ This skill governs the definition, scoping, and validation of user workflows, be
 ## Activation and Non-Activation Conditions
 - **Activation**: Triggers when translating bounded product requests into workflows, defining state coverage, mapping information architecture, or designing product specifications.
   - Validate the proposed workflow through scenario walkthroughs to evaluate specification coherence.
-- **Non-Activation**: Does not trigger for visual design, writing copy, coding, or independent validation.
+- **Non-Activation**: Does not trigger for visual design, writing copy, coding, or independent validation. Does not trigger merely because the deliverable is a website — a public, expressive, or editorial surface with no accounts, workflows, permissions, or state-changing interactions may proceed directly from `creative-direction` and `visual-design` without a product-design specification. This skill activates only when there is actual behaviour, information architecture, forms, transactions, or interaction-state logic requiring definition.
 
 ## Required Inputs
 - Original request or valid task frame.
@@ -74,8 +74,9 @@ This skill governs the definition, scoping, and validation of user workflows, be
 - **Demonstrated Execution**: Include concrete examples demonstrating:
   - a bounded workflow improvement governed by approved conventions;
   - information hierarchy without visual styling;
-  - a workflow blocked by unresolved permissions or ownership policy;
-  - a proposed feature whose solution does not match the stated user problem and therefore requires reframing approval.
+  - a workflow blocked by unresolved permissions or ownership policy, when the product involves accounts or shared data;
+  - a proposed feature whose solution does not match the stated user problem and therefore requires reframing approval;
+  - defining the workflow and information hierarchy for a public, non-transactional surface (for example, an editorial, portfolio, or campaign page) with no accounts, permissions, or persisted user data.
   - Product-design evidence may include: explicit user decisions, approved workflows, screenshots/prototypes, schemas/permission models, scenario walkthroughs, state matrices, and criteria reviews. Existing implementation is evidence of current behaviour, not automatic authority for intended behaviour.
 
 ## Exact Deliverables
@@ -125,19 +126,21 @@ Before claiming the product specification complete:
 - **Placeholder Final Copy**: Fabricating final marketing or interface copy rather than identifying content requirements.
 
 ## Workflow Model
-For each workflow, define:
+For each workflow, define the elements that actually apply to it; omit elements the workflow does not involve rather than forcing a value:
 - actor or role;
 - entry point;
 - prerequisite state;
 - user objective;
 - sequence of user actions;
 - system responses;
-- data created, changed, displayed, or persisted;
-- permissions and visibility;
+- data created, changed, displayed, or persisted, when the workflow involves data;
+- permissions and visibility, when access is restricted;
 - success state;
 - alternate paths;
 - failure and recovery paths;
 - exit or continuation points.
+
+A workflow with no persisted data, accounts, or restricted access (for example, a public reading or exploration path) still defines actor, objective, sequence, system response, and success/failure/exit — it simply has no applicable entry for data persistence or permissions.
 
 ## State Coverage
 Evaluate, where applicable:
@@ -248,4 +251,18 @@ This hierarchy resolves conflicts among workspace instructions and skill documen
   - Behavioural Alternatives: Propose options such as response-status visibility, expectation-setting (e.g. displaying staff response-time targets), escalation workflows, or automated acknowledgements. Document required product data for each option (e.g., staff availability configuration or unreviewed service-request timestamps).
   - Classification: Material Product Decision (Replacing or choosing the requested chatbot approach changes agreed scope).
   - Handoff: Return the decision, consequences, and behavioural alternatives to `task-framing` or user approval. Do not assume schedules exist and do not write final interface copy.
+
+### Example 5: Workflow and Information Hierarchy for a Public Editorial Page
+- **Task**: Define the workflow and information hierarchy for a long-form public article page with no accounts, permissions, or persisted user data.
+- **Controlling Evidence**: The site has no login, no user-specific data, and no destructive or state-changing actions; its purpose is reading and discovery.
+- **Proposed Workflow**:
+  - Actor: Public reader.
+  - Entry Point: Article link from a listing page or external referral.
+  - Sequence: Reader lands on the article, reads the primary content, optionally follows related-article links or shares the page.
+  - System Response: Article renders; related-content links are surfaced at defined points; no data is created, changed, or persisted by the reader's visit.
+  - Success State: Reader reaches the end of the article or a related-content link.
+  - Failure/Recovery: A broken related-content link falls back to the listing page rather than a dead end.
+  - No applicable entries: no permissions, no destructive confirmation, no persisted user data — per the Workflow Model, these are correctly omitted rather than fabricated.
+- **Information Architecture**: Primary grouping is the article body and its immediate supporting media; secondary grouping is related/further-reading links, ordered by relevance rather than recency; no permission-visibility requirement applies.
+- **Visual/Copy handoff**: Hand composition and hierarchy expression to `visual-design`, informed by any approved creative brief; hand headline/deck/body voice to `copywriting` (when that skill exists) rather than `ux-writing`, since this is public-facing editorial language, not interface utility copy.
 ```

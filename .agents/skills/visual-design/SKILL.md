@@ -81,7 +81,7 @@ This skill governs the translation of approved product behaviour, information hi
 
 ## Evidence Requirements
 - **Actionability**: Every procedural step must use imperative language and identify a concrete action plus its expected outcome or validation evidence.
-- **Demonstrated Evidence**: Include concise examples demonstrating: improving a dashboard’s visual hierarchy while preserving its approved information structure; reproducing an approved screenshot without treating framework defaults as authoritative; responsive adaptation that preserves priority rather than merely stacking elements; a design blocked by unresolved palette or typography direction; identifying that a requested visual change actually requires a product-design decision.
+- **Demonstrated Evidence**: Include concise examples demonstrating: improving an existing interface's visual hierarchy while preserving its approved information structure; reproducing an approved screenshot without treating framework defaults as authoritative; responsive adaptation that preserves priority rather than merely stacking elements; a design blocked by unresolved palette or typography direction; identifying that a requested visual change actually requires a product-design decision; and applying an approved creative thesis to produce a non-generic, non-templated composition for a public or expressive surface.
 
 ## Visual-Design Boundary
 - Product design determines what information and actions exist, their behavioural priority, and applicable states.
@@ -270,4 +270,10 @@ Before claiming the visual specification complete:
 - **Task**: "Make the record details page fit on one screen without scrolling by moving the record history into a modal."
 - **Analysis**: Moving persistent history into a modal changes information visibility, access sequence, discoverability, and comparison behaviour. These are product-design concerns, not merely visual rearrangement.
 - **Action**: Stop execution. Present the mismatch and behavioural alternatives to `product-design` or `task-framing` to obtain authorization.
+
+### Example 6: Applying an Approved Creative Thesis to a Public Editorial Page
+- **Task**: Style a long-form public article page once `creative-direction` has supplied an approved thesis emphasizing asymmetric reading rhythm and restrained, non-card-based grouping.
+- **Controlling Evidence**: Approved creative brief anti-reference excludes repeating card grids and pill-badge metadata; approved thesis calls for treating the article body and its supporting media as one continuous reading path rather than segmented widgets.
+- **Specification**: Apply an asymmetric single-column measure with margin-anchored captions instead of a sidebar-card pattern; use established type roles for a reading hierarchy (headline, deck, body, caption) without introducing dashboard-style metadata chrome; responsive behavior collapses margin captions inline rather than into an overflow menu, preserving the continuous-reading-path requirement.
+- **No product-design gate required**: The task has no accounts, permissions, or persisted user data; visual-design proceeds directly from the approved creative brief and a bounded visual request, consistent with this skill's Required Inputs, which already permit "a clearly bounded visual request" as an alternative to a product-design specification.
 ```
