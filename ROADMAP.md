@@ -36,11 +36,16 @@ The current framework provides:
 - expressive creative direction and anti-generic conformance review;
 - visual specification;
 - interface language;
+- public-facing promotional and campaign copy, executing within approved creative direction;
 - general software implementation;
 - specialist frontend implementation, jointly activated with general software implementation;
 - independent, evidence-backed verification.
 
 The foundation should not be broadly redesigned unless real use exposes a concrete defect.
+
+All ten installed skills currently pass `skill-authoring-standard`'s structural validation (10/10) — required
+sections, frontmatter, and anchors are complete and consistent. Structural validation is distinct from
+real-world validation: the latter (Milestone 4) is active and not yet complete.
 
 ---
 
@@ -69,15 +74,17 @@ Own promotional, persuasive, campaign, editorial, and public-facing brand-voice 
 
 ### Boundaries
 
-`copywriting` will:
+`copywriting`:
 
-- consume approved `creative-direction` output;
-- apply supplied brand voice and terminology;
-- distinguish approved copy from newly proposed copy;
-- define observable copy acceptance criteria;
-- hand implementation-ready copy to `software-development`.
+- consumes an approved `creative-direction` thesis when one exists, or bounded direct task-frame grounding when
+  no thesis exists and no material brand-voice decision is involved;
+- applies supplied brand voice and terminology;
+- distinguishes approved copy from newly proposed copy;
+- defines observable copy acceptance criteria;
+- hands frontend-rendered copy to `software-development`/`frontend-development`, with independent verification
+  by `testing-and-verification` only when required — not automatically mandatory.
 
-It will not:
+It does not:
 
 - own interface utility copy, validation, errors, or system feedback — those remain with `ux-writing`;
 - define product behaviour or workflows;
@@ -108,12 +115,15 @@ Created:
 
 ### Purpose
 
-Provide specialist implementation authority for high-fidelity web interfaces while remaining governed by
-`software-development`.
+Provide specialist frontend implementation authority, jointly activated with `software-development`'s governing
+baseline, for any production change to a frontend implementation surface — regardless of visual ambition.
+"High fidelity" is the execution standard applied once implementing, not a threshold for whether this skill
+activates.
 
 ### Responsibility
 
-Own implementation of approved frontend specifications, including:
+Own implementation of approved frontend requirements — supplied through applicable specifications or a bounded
+task frame — including:
 
 - semantic HTML;
 - CSS architecture;
@@ -131,32 +141,38 @@ Own implementation of approved frontend specifications, including:
 
 ### Boundaries
 
-`frontend-development` will consume:
+`frontend-development` consumes, as applicable:
 
 - product behaviour from `product-design`, when applicable;
-- expressive rules from `creative-direction`;
-- exact visual specifications from `visual-design`;
-- interface strings from `ux-writing`;
-- public-facing copy from `copywriting`;
-- executable task boundaries from `task-framing`.
+- an approved thesis from `creative-direction`, when one exists;
+- exact visual specifications from `visual-design`, when one exists and reference fidelity is required;
+- interface strings from `ux-writing`, when applicable;
+- public-facing copy from `copywriting`, when applicable;
+- executable task boundaries from `task-framing`;
+- otherwise, direct grounding in the task frame and established conventions when no upstream package applies.
 
-It will not:
+It does not:
 
 - redesign the product while implementing it;
 - replace approved composition with framework defaults;
 - simplify distinctive work into generic component-library patterns;
 - invent copy, states, interactions, or brand decisions;
-- claim fidelity from code inspection alone;
-- replace independent verification.
+- claim fidelity from code inspection alone, or claim external reference fidelity when no reference target
+  exists;
+- substitute self-validation for independent verification when independent verification is required.
 
 ### Completion criteria
 
-- Clearly inherits implementation discipline from `software-development`.
+- Clearly inherits implementation discipline from `software-development` through joint activation, not a
+  separate procedure.
 - Covers both application interfaces and expressive public sites.
 - Includes explicit protection against framework-default and component-library drift.
-- Requires rendered comparison against approved references and specifications.
+- Requires rendered comparison against an approved reference or specification when one exists or fidelity is
+  required; states explicitly when no external fidelity claim is made.
 - Defines practical frontend evidence: browser execution, viewport checks, interaction checks, visual comparison,
   accessibility inspection, and performance evidence where relevant.
+- Requires independent verification by `testing-and-verification` only when the task frame, risk, or acceptance
+  criteria call for it.
 
 ---
 
@@ -193,7 +209,7 @@ Whether implemented inside `frontend-development` or separately, the framework m
 - reduced-motion behaviour;
 - interruption and reversal;
 - performance-conscious animation;
-- motion fidelity to the approved creative thesis.
+- motion fidelity to the approved creative thesis, when one exists.
 
 ### Boundaries
 
@@ -210,9 +226,11 @@ Motion implementation must not:
 
 ## Milestone 4 — Real-World Validation
 
-**Status:** Required before broad expansion
+**Status:** Active
 
-Use the framework on complete projects representing different work types.
+Use the framework on complete projects representing different work types. Motion-boundary evidence for
+Milestone 3 is collected as part of these real frontend-implementation validation projects, not as a
+speculative standalone design exercise.
 
 ### Validation projects
 
@@ -369,9 +387,11 @@ clear.
 ## Current execution order
 
 ```text
-1. Validate authored interaction and motion during real frontend implementation
-2. Run full projects through the framework
-3. Fix only concrete defects exposed by use
-4. Add lightweight repository validation tooling
-5. Prepare the first stable release
+1. Run the three real-world validation project categories through the complete framework.
+2. Capture authored-interaction and motion evidence during those frontend implementations.
+3. Fix only concrete defects exposed by actual use.
+4. Add lightweight validation tooling after the first validation work demonstrates which checks are worth
+   automating.
+5. Expand documentation and examples from validated workflows.
+6. Prepare the first stable release after the roadmap's release gates are satisfied.
 ```

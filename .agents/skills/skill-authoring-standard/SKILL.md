@@ -80,7 +80,7 @@ Before presenting a skill to the user:
 - [ ] **Concrete Example**: The concrete usage example is present.
 - [ ] **No Placeholders**: No TODOs, accidental placeholders, unfinished template text, or unresolved drafting markers remain. Clearly defined instructional metavariables such as `<skill-name>` are permitted.
 - [ ] **Link Verification**: All file links resolve correctly. Prefer repository-relative links; use absolute links only when explicitly required or justified.
-- [ ] **Clean Package Check**: `git diff` (or workspace audit) contains only the authorized skill package.
+- [ ] **Clean Package Check**: `git diff` (or workspace audit) contains only the authorized target skill package, explicitly authorized integration changes to existing skills or repository documentation (e.g., updating cross-skill handoffs when a new skill is installed), and no unrelated edits.
 
 ## Stop and Failure Conditions
 - **Halt Execution immediately when**:

@@ -1,8 +1,8 @@
 # Agentic Skills
 
 A set of composable governance skills for AI coding agents working on web products and digital experiences — from
-initial task scoping through product design, creative direction, visual design, UX writing, implementation, and
-independent verification.
+initial task scoping through product design, creative direction, visual design, UX writing, promotional
+copywriting, implementation, and independent verification.
 
 Each skill is a self-contained `SKILL.md` file under `.agents/skills/<name>/`, following the structure defined by
 [`skill-authoring-standard`](.agents/skills/skill-authoring-standard/SKILL.md): YAML frontmatter with explicit
@@ -35,7 +35,7 @@ campaign web work are treated as two legitimate, coexisting routes, not one defa
 | [`visual-design`](.agents/skills/visual-design/SKILL.md) | Visual hierarchy, composition, typography, colour, spacing, component appearance, and responsive/state treatment. |
 | [`ux-writing`](.agents/skills/ux-writing/SKILL.md) | Exact interface language — labels, errors, validation, confirmations, empty states — within approved behaviour and voice. |
 | [`copywriting`](.agents/skills/copywriting/SKILL.md) | Promotional, persuasive, campaign, editorial, and public-facing brand-voice language — headlines, hero statements, narrative, and CTAs — within approved creative direction. |
-| [`software-development`](.agents/skills/software-development/SKILL.md) | Implementing approved, bounded software changes with scope discipline and validated evidence; supplies the governing implementation baseline `frontend-development` operates under. |
+| [`software-development`](.agents/skills/software-development/SKILL.md) | Implementing approved, bounded software changes with scope discipline and implementation self-validation evidence; supplies the governing implementation baseline `frontend-development` operates under. |
 | [`frontend-development`](.agents/skills/frontend-development/SKILL.md) | Specialist frontend implementation — markup, styles, components, responsive/client-side behaviour, server-rendered frontend concerns, accessibility mechanics, performance, and approved motion — activating jointly with `software-development`. |
 | [`testing-and-verification`](.agents/skills/testing-and-verification/SKILL.md) | Independent, evidence-backed verification of implementation claims, defects, and acceptance criteria. |
 
@@ -56,7 +56,8 @@ task-framing
     └─ product-design, only where workflows, IA, forms, transactions, permissions, or interaction-state
        logic require definition
            ↓ (both branches feed forward)
-    visual-design + ux-writing + copywriting
+    applicable visual-design / ux-writing / copywriting outputs (not every surface requires all three —
+    a purely editorial page with no interface controls may need no ux-writing at all)
     → software-development baseline + frontend-development specialist execution → testing-and-verification
       (when independently required)
 
@@ -73,8 +74,10 @@ task-framing
 `frontend-development` activates jointly with `software-development` for any production change to a frontend
 implementation surface, regardless of visual ambition — `software-development` supplies the governing baseline
 (scope, classification, evidence honesty); `frontend-development` supplies frontend-specific execution and
-self-validation within it. Independent verification by `testing-and-verification` is required when the task
-frame, risk, or acceptance criteria call for it; otherwise self-validated work returns to the current workflow.
+self-validation within it. A bounded frontend task may also proceed directly from the task frame's requirements
+and established conventions when no upstream product-design, creative-direction, or visual-design package is
+necessary. Independent verification by `testing-and-verification` is required when the task frame, risk, or
+acceptance criteria call for it; otherwise self-validated work returns to the current workflow.
 
 `creative-direction` grounds itself in an approved `product-design` specification when one exists, or directly in
 the task's audience, communication objective, content requirements, and user-approved references when it doesn't
@@ -82,10 +85,14 @@ the task's audience, communication objective, content requirements, and user-app
 
 ## Status
 
-- Ten foundational skills installed and stable as of this writing — no further architectural changes unless real
-  use surfaces a concrete defect.
-- Whether authored motion belongs inside `frontend-development` or warrants an independent `motion-development`
-  skill remains active validation pending during real frontend implementation — not yet resolved.
+- Ten foundational skills installed; all ten currently pass `skill-authoring-standard`'s structural validation
+  (required sections, frontmatter, anchors) — no known structural compliance gaps remain.
+- Structural validation is not the same as real-world validation: no further architectural changes are planned
+  unless real use surfaces a concrete defect, and real-world validation across the project categories in
+  `ROADMAP.md` is the active phase, not yet complete.
+- Motion implementation remains inside `frontend-development`; whether it warrants an independent
+  `motion-development` skill is evaluated through real implementation evidence gathered during that active phase,
+  not resolved in advance.
 
 ## Using these skills
 

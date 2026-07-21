@@ -26,11 +26,11 @@ This skill governs the definition, scoping, and validation of user workflows, be
 
 ## Responsibility Boundaries
 - **Primary Responsibility**: Identifying users and objectives, translating product requests into workflows, defining transitions/states, defining information hierarchy, evaluating features against user problems, producing product specifications/criteria, and identifying exclusions/assumptions.
-- **Adjacent Responsibilities**: Consumes task frames from `task-framing` and hands approved specifications to visual design, UX writing, development, and testing.
+- **Adjacent Responsibilities**: Consumes task frames from `task-framing` and hands approved specifications, as applicable, to `visual-design`, `ux-writing`, `software-development` (jointly with the installed `frontend-development` specialist when the implementation surface is frontend), and `testing-and-verification` when independent verification is required — not every product-design task requires every downstream discipline.
 - **Explicit Exclusions**: Does not own visual styling (colors, typography, branding, aesthetic direction), final interface/marketing copy, production implementation, independent verification, material architecture/dependencies/schema/security decisions, or business/monetization policy.
   - Approved screenshots, prototypes, product documents, schemas, contracts, copy, and current behaviour may serve as controlling evidence. Product design interprets their behavioural implications but does not redefine approved visual direction, final wording, architecture, or implementation.
   - Excludes editorial and public-copy decisions, security-policy decisions, licensing and cost decisions, dependency selection, and changes to expected results that are not already authorized.
-- **Handoff Conditions**: After the product behaviour and workflow specification is complete, hand behavioural requirements to visual design, UX writing, software development, and testing-and-verification as applicable. Return unresolved material product decisions to `task-framing`.
+- **Handoff Conditions**: After the product behaviour and workflow specification is complete, hand behavioural requirements, as applicable, to `visual-design`, `ux-writing`, and `software-development` (jointly with `frontend-development` when the implementation surface is frontend); hand observable criteria to `testing-and-verification` when independent verification is required. Return unresolved material product decisions to `task-framing`.
 
 ## Activation and Non-Activation Conditions
 - **Activation**: Triggers when translating bounded product requests into workflows, defining state coverage, mapping information architecture, or designing product specifications.

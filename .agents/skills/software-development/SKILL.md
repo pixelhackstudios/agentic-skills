@@ -19,7 +19,7 @@ description: |
 This skill governs the inspection, modification, and validation of application source code, configuration, schemas, and dependencies within an established task frame.
 
 ## Purpose and Exclusive Responsibility
-- **Goal**: Standardize the implementation and verification of bounded software changes, ensuring minimal complete modifications, explicit change classification, and rigorous validation.
+- **Goal**: Standardize the implementation and self-validation of bounded software changes, ensuring minimal complete modifications, explicit change classification, and rigorous validation.
 - **Exclusive Responsibility**: This skill owns the general implementation workflow for bounded software changes. Specialist development skills may edit application code within their explicitly delegated domains, while conforming to this skill’s implementation, scope-protection, and evidence requirements.
 
 ## Responsibility Boundaries
@@ -114,7 +114,7 @@ Before claiming completion or handing off the implementation:
   - Preserve partial work unless demonstrably invalid. Report the exact failing command, affected surface, current repository state, and distinguish implementation defects from environmental or policy blockers. Never claim full completion when integration remains incomplete.
 
 ## Prohibited Behaviours
-- **Vague Verification**: Claiming code works without presenting direct, inspectable validation evidence.
+- **Vague Self-Validation**: Claiming code works without presenting direct, inspectable validation evidence.
 - **Opportunistic Refactoring**: Rewriting adjacent systems merely because they appear imperfect.
 - **Destructive Worktree Actions**: Never use destructive worktree commands such as `git reset --hard`, `git clean -fd`, or broad checkout/restore operations that could erase unrelated user work.
 - **Silent Schema/Dependency Decisions**: Adding dependencies, altering schemas, or changing APIs without authorization.

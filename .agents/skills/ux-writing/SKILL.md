@@ -83,8 +83,11 @@ This skill governs the translation of approved product behaviour, user objective
 - UX writing defines the exact interface language used to communicate those approved requirements.
 - Visual design determines presentation and emphasis.
 - Copywriting owns promotional, persuasive, campaign, and broader brand-facing copy.
-- Software development implements supplied text.
-- Testing-and-verification independently checks rendered wording, state accuracy, and interaction results.
+- Software development supplies the governing implementation baseline for implementing supplied text;
+  `frontend-development` supplies specialist execution when the string is rendered on a frontend surface, and
+  another future specialist may apply in a non-frontend domain.
+- Testing-and-verification independently checks rendered wording, state accuracy, and interaction results, when
+  independent verification is required.
 - UX writing must not silently alter product behaviour through wording.
 
 ## Evidence Requirements
@@ -260,10 +263,10 @@ Before claiming the interface-copy package complete:
 ## Conflict-Resolution and Evidence Hierarchy
 This hierarchy resolves conflicts among workspace instructions and skill documents. It does not override platform-level, system-level, safety, security, or tool-use requirements governing the agent.
 - **Conflict Resolution**:
-  1. Current explicit user instructions and decisions.
-  2. Workspace rules.
-  3. `skill-authoring-standard`.
-  4. Individual skill instructions.
+  1. User's explicit instructions in the current prompt.
+  2. Workspace rules (`.agents/AGENTS.md`).
+  3. Governing standard (`.agents/skills/skill-authoring-standard/SKILL.md`).
+  4. Individual skill `SKILL.md`.
   5. Global agent guidelines.
 - **Evidence Hierarchy (Source of Truth)**:
   The applicable evidence depends on the discipline.

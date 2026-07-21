@@ -1,7 +1,9 @@
 ---
 name: visual-design
 description: |
-  Translating approved product behaviour, information hierarchy, brand direction, and reference assets into coherent visual specifications and visual artifacts.
+  Translating approved requirements — product behaviour and information hierarchy when applicable, an approved
+  creative-direction thesis when one exists, or a bounded task-frame request otherwise — plus brand direction and
+  reference assets, into coherent visual specifications and visual artifacts.
   Execute when translating product requirements into visual hierarchy, layouts, spacing, color scales, or typography styles.
 
   Trigger immediately for:
@@ -18,15 +20,17 @@ description: |
 
 # Visual Design
 
-This skill governs the translation of approved product behaviour, information hierarchy, brand direction, and reference assets into coherent visual specifications and visual artifacts.
+This skill governs the translation of approved requirements — product behaviour and information hierarchy when
+applicable, an approved creative-direction thesis when one exists, or a bounded task-frame request otherwise —
+plus brand direction and reference assets, into coherent visual specifications and visual artifacts.
 
 ## Purpose and Exclusive Responsibility
-- **Goal**: Define coherent visual layouts, hierarchy, spacing, typography, and color systems within granted authority to express approved product priorities.
-- **Exclusive Responsibility**: Translating approved product behaviour, information hierarchy, brand direction, and reference assets into coherent visual specifications and visual artifacts.
+- **Goal**: Define coherent visual layouts, hierarchy, spacing, typography, and color systems within granted authority to express approved requirements — product priorities when applicable, an approved creative thesis when one exists, or a bounded task-frame request otherwise.
+- **Exclusive Responsibility**: Translating approved requirements — product behaviour and information hierarchy when applicable, an approved creative-direction thesis when one exists, or a bounded task-frame request otherwise — plus brand direction and reference assets, into coherent visual specifications and visual artifacts.
 
 ## Responsibility Boundaries
 - **Primary Responsibility**: Defining visual hierarchy, composition/spatial organization, layout systems, typography/color application, spacing/density, component appearance, shapes/elevation, imagery treatment, responsive adaptations, state styling, and visual acceptance criteria.
-- **Adjacent Responsibilities**: Consumes product specifications from `product-design` and hands visual specifications to `software-development`/`frontend-development` and `testing-and-verification`.
+- **Adjacent Responsibilities**: Consumes product specifications from `product-design` when applicable, an approved creative-direction thesis when one exists, or a bounded task-frame request otherwise. Hands visual specifications to `software-development`/`frontend-development`, and observable visual criteria to `testing-and-verification` when independent verification is required.
 - **Explicit Exclusions**: Does not own product workflows, business rules, permissions, state transitions, product acceptance criteria, final interface copy/labels, production code implementation, or independent verification.
   - Approved design references, copy, schemas, contracts, and product specifications may serve as controlling evidence. This skill interprets and applies their visual implications but does not redefine approved product behaviour, final wording, architecture, or implementation.
   - Excludes editorial and public-copy decisions, security-policy decisions, licensing and cost decisions, dependency selection, and changes to expected results that are not already authorized.

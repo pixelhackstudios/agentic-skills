@@ -2,7 +2,7 @@
 name: testing-and-verification
 description: |
   Independently determines whether claimed behaviour, acceptance criteria, integrations, and completion statements are supported by appropriate evidence.
-  Execute when validating implementation results, conducting regression checks, running test suites, or verifying task completion.
+  Execute when independently validating implementation results or completion claims, conducting regression checks, or running test suites.
 
   Trigger immediately for:
   - independently verifying a completed implementation;

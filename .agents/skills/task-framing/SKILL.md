@@ -149,7 +149,7 @@ When evidence conflicts, use the source with the most direct authority over the 
 - **Completion Evidence**: HTML class toggling after user interaction and correct initialization after reload.
 - **Authorized Decisions**: Icon selection, component naming, and navbar placement under existing conventions.
 - **Unresolved Material Decisions**: None. (Placement would only escalate if references conflicted or all viable placements materially altered the design).
-- **Execution Destination**: Current agent workflow (no separate handoff required).
+- **Execution Destination**: `software-development` baseline + `frontend-development` specialist execution, proceeding within the current agent workflow — installed execution skills still apply even when execution continues in the same workflow rather than requiring a separate handoff.
 
 ### Example 2: Reported Frame Mode (Refactor API Error Handling)
 - **Task**: "Improve error handling across all API routes to return clean JSON and log errors."
@@ -163,7 +163,7 @@ When evidence conflicts, use the source with the most direct authority over the 
 - **Completion Evidence**: Observed HTTP JSON response codes and terminal execution output.
 - **Authorized Decisions**: Internal logging metadata, helper structure, and implementation details consistent with existing conventions. Public response schemas, status-code semantics, and user-visible error wording are bounded decisions only when an existing API contract or project convention already governs them. Otherwise, treat consequential changes as unresolved material decisions.
 - **Unresolved Material Decisions**: None.
-- **Execution Destination**: Current agent workflow or `backend-development` / `software-development` skill, when such a skill exists.
+- **Execution Destination**: Current agent workflow or the installed `software-development` skill. (A future `backend-development` specialist may apply once installed; unlike `software-development`, it remains hypothetical.)
 
 ### Example 3: Creative-First Routing with Parallel Concerns (Public Campaign Page)
 - **Task**: "Build a launch page for our new product announcement. No accounts — the only interactive element is an email-signup form."
@@ -173,7 +173,8 @@ When evidence conflicts, use the source with the most direct authority over the 
   - `creative-direction` establishes the overall expressive thesis for the page.
   - `product-design`, narrowly, defines only the signup form's behaviour: submit action, validation states, success state, failure/recovery state.
   - `visual-design` and `ux-writing`/`copywriting` each consume the applicable approved output from both branches — `visual-design` applies the creative thesis to the page's overall composition and the approved form states to that one element; `ux-writing` writes the signup form's validation/error copy from product-design's states; `copywriting` writes the surrounding headline and persuasive copy from the creative thesis.
-  - Both branches then proceed to `software-development`/`frontend-development` and `testing-and-verification`.
+  - Both branches then proceed to `software-development` baseline + `frontend-development` specialist execution,
+    and to `testing-and-verification` only when independent verification is required.
 - **Unresolved Material Decisions**: None.
 - **Note**: Do not route the whole page through `product-design` first merely because it contains a form; do not route the form's behaviour through `creative-direction` merely because the page is expressive.
 

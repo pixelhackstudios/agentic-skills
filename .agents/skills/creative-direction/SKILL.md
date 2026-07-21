@@ -60,8 +60,9 @@ execution from still producing a competent but interchangeable result.
   approved creative-brief entries and task-authorized bounded creative decisions to `visual-design`, `ux-writing`,
   and `copywriting` (the discipline responsible for promotional or public-facing copy) as controlling creative
   evidence. Clearly marks newly proposed, unresolved, rejected, or superseded entries as non-controlling. Reviews
-  their output through the bounded creative-conformance gate. Reviews rendered implementation alongside
-  `testing-and-verification` without replacing it.
+  their output through the bounded creative-conformance gate. Reviews rendered implementation whenever a
+  rendered implementation exists, running alongside `testing-and-verification` when independent verification is
+  also required for that task, without replacing it.
   - `visual-design` authors exact visual specifications; `ux-writing` authors exact interface strings;
     `copywriting` authors promotional and public-facing copy. `creative-direction` may review those outputs for
     conformance but does not author their discipline-specific execution.
@@ -483,8 +484,10 @@ creative-conformance specification review
     ↓
 software-development baseline + frontend-development specialist execution (when the implementation is a frontend surface)
     ↓
-testing-and-verification + rendered creative review
-    ↓
+    ├─ rendered creative review (creative-direction), whenever a rendered implementation exists
+    └─ testing-and-verification, when independent verification is required by the task frame, governing
+       process, risk, or acceptance criteria
+    ↓ (both, when both run, produce independent verdicts over the same implementation)
 final completion or routed revision
 ```
 
@@ -497,10 +500,13 @@ Rendered creative review:
   `visual-design`/`ux-writing`/`copywriting` if the specification was the point of loss,
   `software-development`/`frontend-development` if implementation diverged from a faithful specification);
 - does not modify production code;
-- does not own behavioural testing, technical correctness, accessibility verification, performance verification,
-  or implementation evidence — those remain owned by `testing-and-verification`;
-- does not replace `testing-and-verification`; both may run over the same implementation, each producing its own
-  verdict.
+- runs whether or not independent technical verification is required for this task;
+- does not own behavioural testing, technical correctness, accessibility verification, or performance
+  verification — independent verification evidence and its formal verdict remain owned by
+  `testing-and-verification`, when independent verification is required; implementation and self-validation
+  evidence remain owned by `software-development`/`frontend-development`;
+- does not replace `testing-and-verification` when it does run; both may run over the same implementation, each
+  producing its own independent verdict.
 
 ### Brief Integrity During Rendered Review
 When rendered work conflicts with the current approved brief, `creative-direction` must first determine whether
