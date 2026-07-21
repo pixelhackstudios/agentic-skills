@@ -637,7 +637,7 @@ This hierarchy resolves conflicts among workspace instructions and skill documen
 platform-level, system-level, safety, security, or tool-use requirements governing the agent.
 - **Conflict Resolution**:
   1. User's explicit instructions in the current prompt.
-  2. Workspace rules (`.agents/AGENTS.md`).
+  2. Workspace rules (`AGENTS.md` or equivalent).
   3. Governing standard (`.agents/skills/skill-authoring-standard/SKILL.md`).
   4. Individual skill `SKILL.md`.
   5. Global agent guidelines.

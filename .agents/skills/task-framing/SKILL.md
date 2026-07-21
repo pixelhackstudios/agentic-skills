@@ -25,7 +25,7 @@ This skill governs the initial scoping, boundary definition, and mode selection 
 
 ## Responsibility Boundaries
 - **Primary Responsibility**: Define the task frame boundaries, outcome specifications, and correct framing mode.
-- **Adjacent Responsibilities**: Consumes rules from `.agents/AGENTS.md` (or equivalent) and passes bounded tasks to specialized execution skills.
+- **Adjacent Responsibilities**: Consumes rules from `AGENTS.md` (or equivalent) and passes bounded tasks to specialized execution skills.
 - **Explicit Exclusions**: Does not perform actual design, coding, copywriting, or testing of features.
 - **Handoff Conditions**: After framing, hand the bounded task to the appropriate discipline or existing skill, or continue execution in the current agent workflow when no separate handoff is required.
 
@@ -114,7 +114,7 @@ Before proceeding:
 This hierarchy resolves conflicts among workspace instructions and skill documents. It does not override platform-level, system-level, safety, security, or tool-use requirements governing the agent.
 - **Conflict Resolution**:
   1. User's explicit instructions in the current prompt.
-  2. Workspace rules (`.agents/AGENTS.md`).
+  2. Workspace rules (`AGENTS.md` or equivalent).
   3. Governing standard (`.agents/skills/skill-authoring-standard/SKILL.md`).
   4. Individual skill `SKILL.md`.
   5. Global agent guidelines.

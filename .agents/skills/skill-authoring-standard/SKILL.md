@@ -23,7 +23,7 @@ This document governs the quality, structure, boundaries, and validation of all 
 
 ## Responsibility Boundaries
 - **Primary Responsibility**: Defining the structure, quality rules, layout, and validation guidelines for files within `.agents/skills/`.
-- **Adjacent Responsibilities**: Integrates with workspace-level configurations (e.g., `.agents/AGENTS.md`) and validation pipelines.
+- **Adjacent Responsibilities**: Integrates with workspace-level configurations (e.g., `AGENTS.md`) and validation pipelines.
 - **Explicit Exclusions**: Does not govern actual application runtime logic, product features, or tests of software applications.
 - **Handoff Conditions**: When a skill has been authored and validated, handoff control to the relevant agent execution flow or user review.
 
@@ -103,7 +103,7 @@ Before presenting a skill to the user:
 This hierarchy resolves conflicts among workspace instructions and skill documents. It does not override platform-level, system-level, safety, security, or tool-use requirements governing the agent.
 - **Conflict Resolution**:
   1. User's explicit instructions in the current prompt.
-  2. Workspace rules (`.agents/AGENTS.md`).
+  2. Workspace rules (`AGENTS.md` or equivalent).
   3. Governing standard (`.agents/skills/skill-authoring-standard/SKILL.md`).
   4. Individual skill `SKILL.md`.
   5. Global agent guidelines.

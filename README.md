@@ -100,3 +100,7 @@ Copy `.agents/skills/` into a project's root. Each `SKILL.md`'s frontmatter (`Tr
 `DO NOT trigger for`) tells a skill-aware agent when to load it. `skill-authoring-standard` governs how to add,
 modify, or audit any skill in this directory — read it before changing the structure of an existing skill or
 adding a new one.
+
+This repository's root `AGENTS.md` governs maintenance of the Agentic Skills framework itself — it is not
+automatically the operating contract for a project that consumes these skills. A host project should supply its
+own workspace rules appropriate to that project; the reusable package remains `.agents/skills/`.
