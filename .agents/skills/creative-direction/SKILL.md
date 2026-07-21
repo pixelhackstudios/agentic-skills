@@ -11,9 +11,8 @@ description: |
   Trigger immediately for:
   - New products, major redesigns, or establishing/materially changing a visual or expressive language.
   - Flagship or public-facing work, or internal work whose success materially depends on distinctive authorship.
-  - Reviewing whether a visual-design or ux-writing output — or promotional/public-facing copy output, when a
-    corresponding `copywriting` skill exists — or a rendered implementation conforms to an approved creative
-    thesis, anti-reference, signature device, or coherence rule.
+  - Reviewing whether a visual-design, ux-writing, or copywriting output — or a rendered implementation —
+    conforms to an approved creative thesis, anti-reference, signature device, or coherence rule.
 
   DO NOT trigger for:
   - Product behaviour, workflows, states, permissions, or business rules (owned by `product-design`).
@@ -59,13 +58,13 @@ execution from still producing a competent but interchangeable result.
   audience, communication objective, content requirements, approved brand evidence, and user-approved references
   instead. Hands
   approved creative-brief entries and task-authorized bounded creative decisions to `visual-design`, `ux-writing`,
-  and the discipline responsible for promotional or public-facing copy (`copywriting`, when that skill exists) as
-  controlling creative evidence. Clearly marks newly proposed, unresolved, rejected, or superseded entries as
-  non-controlling. Reviews their output through the bounded creative-conformance gate. Reviews rendered
-  implementation alongside `testing-and-verification` without replacing it.
+  and `copywriting` (the discipline responsible for promotional or public-facing copy) as controlling creative
+  evidence. Clearly marks newly proposed, unresolved, rejected, or superseded entries as non-controlling. Reviews
+  their output through the bounded creative-conformance gate. Reviews rendered implementation alongside
+  `testing-and-verification` without replacing it.
   - `visual-design` authors exact visual specifications; `ux-writing` authors exact interface strings;
-    `copywriting`, when it exists, authors promotional and public-facing copy. `creative-direction` may review
-    those outputs for conformance but does not author their discipline-specific execution.
+    `copywriting` authors promotional and public-facing copy. `creative-direction` may review those outputs for
+    conformance but does not author their discipline-specific execution.
 - **Explicit Exclusions**: Does not own product behaviour, workflows, states, permissions, information
   architecture, or business rules; exact layouts, spacing, colour values, type scales, components, or responsive
   specifications; exact interface strings; promotional copy execution; production implementation; testing or
@@ -74,8 +73,8 @@ execution from still producing a competent but interchangeable result.
   - Approved product specifications, references, and explicit user decisions are controlling evidence this skill
     interprets and expresses through — it does not redefine them.
 - **Handoff Conditions**: After the thesis is established or reused, hand approved creative-brief entries and
-  task-authorized bounded creative decisions to `visual-design`, `ux-writing`, and `copywriting` (when that skill
-  exists) as controlling creative evidence; newly proposed, unresolved, rejected, or superseded entries may be
+  task-authorized bounded creative decisions to `visual-design`, `ux-writing`, and `copywriting` as controlling
+  creative evidence; newly proposed, unresolved, rejected, or superseded entries may be
   shared for review but do not control implementation until approved or task-authorized. After their
   specifications exist, run the creative-conformance gate and route violations back to the responsible
   discipline. After implementation exists, run rendered creative review and route fidelity losses to the
@@ -121,7 +120,7 @@ affect the established expressive identity.
   the applicable activation mode requires it.
   - `visual-design` creates exact visual specifications.
   - `ux-writing` creates exact interface strings.
-  - `copywriting`, when it exists, creates promotional and public-facing copy.
+  - `copywriting` creates promotional and public-facing copy.
   - `creative-direction` may review those outputs but does not author their discipline-specific execution.
 
 ## Required Inputs
@@ -133,8 +132,7 @@ affect the established expressive identity.
   convention.
 - User-supplied references, anti-references, and explicit creative decisions.
 - Accessibility, platform, behavioural, and technical constraints supplied by other disciplines.
-- Downstream specifications (`visual-design`, `ux-writing`, and `copywriting` when that skill exists) when running
-  the conformance gate.
+- Downstream specifications (`visual-design`, `ux-writing`, and `copywriting`) when running the conformance gate.
 - A rendered implementation or observable artifact when running rendered creative review.
 - *Note*: Not all inputs must exist; explicitly identify missing information that prevents grounding the thesis.
 
@@ -199,8 +197,8 @@ affect the established expressive identity.
    present it conversationally or task-scoped, report the persistence status explicitly, and flag the missing
    persistence decision.
 10. **Hand Off Controlling Evidence**: Hand approved creative-brief entries and task-authorized bounded creative
-    decisions to `visual-design`, `ux-writing`, and `copywriting` (when that skill exists) as controlling creative
-    evidence. Mark any remaining newly proposed, unresolved, rejected, or superseded entries as non-controlling.
+    decisions to `visual-design`, `ux-writing`, and `copywriting` as controlling creative evidence. Mark any
+    remaining newly proposed, unresolved, rejected, or superseded entries as non-controlling.
 11. **Run the Conformance Gate**: When downstream specifications exist, run the bounded creative-conformance
     gate in [Bounded Creative-Conformance Gate](#bounded-creative-conformance-gate). Route violations to the
     responsible discipline with the required citation. Route unresolved disputes per the dispute-resolution rule.
@@ -449,8 +447,8 @@ User-approved references and anti-references outrank independently sourced refer
 tasks do not trigger fresh research automatically.
 
 ## Bounded Creative-Conformance Gate
-`creative-direction` may return `visual-design`, `ux-writing`, or `copywriting` (when that skill exists) output
-for revision only by identifying:
+`creative-direction` may return `visual-design`, `ux-writing`, or `copywriting` output for revision only by
+identifying:
 - the exact approved thesis element, anti-reference, signature device, coherence rule, or creative acceptance
   criterion that is violated;
 - the observable conflict;
@@ -479,7 +477,7 @@ task-framing (routes according to the task's dominant purpose)
     │  logic require it
     └─ creative-direction establishes or reuses the thesis
            ↓ (both branches feed forward)
-visual-design / ux-writing / copywriting (when that skill exists)
+visual-design / ux-writing / copywriting
     ↓
 creative-conformance specification review
     ↓
@@ -496,7 +494,7 @@ Rendered creative review:
 - identifies whether fidelity was lost in the creative brief, the visual or language specifications, or the
   implementation;
 - routes revisions to the responsible discipline (`creative-direction` itself if the brief was insufficient,
-  `visual-design`/`ux-writing`/`copywriting` — when it exists — if the specification was the point of loss,
+  `visual-design`/`ux-writing`/`copywriting` if the specification was the point of loss,
   `software-development` if implementation diverged from a faithful specification);
 - does not modify production code;
 - does not own behavioural testing, technical correctness, accessibility verification, performance verification,
@@ -662,11 +660,12 @@ constraints — never the reverse.
 ## Concrete Usage Examples
 
 > [!NOTE]
-> All named products, briefs, storage paths, references, and skills not already present in this repository
-> (`skill-authoring-standard`, `task-framing`, `software-development`, `testing-and-verification`,
-> `product-design`, `visual-design`, `ux-writing`) are hypothetical, including `copywriting`. The example product
-> used below (`FieldNotes`, a volunteer ecological field-monitoring app) is invented solely for these examples
-> and is unrelated to any product referenced by other skill files.
+> All named products, briefs, storage paths, and references not already present in this repository are
+> hypothetical. The repository currently contains `skill-authoring-standard`, `task-framing`,
+> `software-development`, `testing-and-verification`, `product-design`, `visual-design`, `ux-writing`,
+> `creative-direction`, and `copywriting`. The example product used below (`FieldNotes`, a volunteer ecological
+> field-monitoring app) is invented solely for these examples and is unrelated to any product referenced by other
+> skill files.
 
 ### Example 1: Establishing a Product-Specific Thesis (Preventing a Generic Dashboard)
 - **Task**: Establish creative direction for a new volunteer ecological field-monitoring app (hypothetical

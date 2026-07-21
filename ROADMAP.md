@@ -23,6 +23,7 @@ The foundational architecture is installed and considered stable:
 - `creative-direction`
 - `visual-design`
 - `ux-writing`
+- `copywriting`
 - `software-development`
 - `testing-and-verification`
 
@@ -43,9 +44,9 @@ The foundation should not be broadly redesigned unless real use exposes a concre
 
 ## Milestone 1 — Copywriting
 
-**Status:** Next
+**Status:** Completed
 
-Create:
+Created:
 
 ```text
 .agents/skills/copywriting/SKILL.md
@@ -95,7 +96,7 @@ It will not:
 
 ## Milestone 2 — Frontend Development
 
-**Status:** Planned after `copywriting`
+**Status:** Next
 
 Create:
 
@@ -242,7 +243,7 @@ At minimum:
 - Did the framework increase quality without creating procedural drag?
 - Could another agent follow the skills without hidden conversational context?
 
-Only concrete defects found during these projects should reopen the eight foundational skills.
+Only concrete defects found during these projects should reopen the nine foundational skills.
 
 ---
 
@@ -363,11 +364,10 @@ clear.
 ## Current execution order
 
 ```text
-1. Build copywriting
-2. Build frontend-development
-3. Validate authored interaction and motion during real implementation
-4. Run full projects through the framework
-5. Fix only concrete defects exposed by use
-6. Add lightweight repository validation tooling
-7. Prepare the first stable release
+1. Build frontend-development
+2. Validate authored interaction and motion during real implementation
+3. Run full projects through the framework
+4. Fix only concrete defects exposed by use
+5. Add lightweight repository validation tooling
+6. Prepare the first stable release
 ```

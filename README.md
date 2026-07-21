@@ -13,7 +13,8 @@ evidence requirements, validation gates, and a conflict-resolution hierarchy. Ag
 ## Why this exists
 
 Disciplined execution of individual skills (don't invent product behaviour in visual design, don't write final
-copy in product design, don't skip verification evidence) is necessary but not sufficient — it can still produce
+copy in product design, don't fabricate claims in promotional copy, don't skip verification evidence) is
+necessary but not sufficient — it can still produce
 a competent, correctly-behaved, but completely generic result: another SaaS dashboard, another card grid,
 another shadcn-default composition. This framework adds a layer specifically to prevent that: `creative-direction`
 owns the expressive thesis and cross-disciplinary coherence that makes a product or site feel authored and
@@ -33,6 +34,7 @@ campaign web work are treated as two legitimate, coexisting routes, not one defa
 | [`creative-direction`](.agents/skills/creative-direction/SKILL.md) | The approved expressive thesis, anti-references, signature devices, and cross-disciplinary coherence rules that make an experience specific and authored. |
 | [`visual-design`](.agents/skills/visual-design/SKILL.md) | Visual hierarchy, composition, typography, colour, spacing, component appearance, and responsive/state treatment. |
 | [`ux-writing`](.agents/skills/ux-writing/SKILL.md) | Exact interface language — labels, errors, validation, confirmations, empty states — within approved behaviour and voice. |
+| [`copywriting`](.agents/skills/copywriting/SKILL.md) | Promotional, persuasive, campaign, editorial, and public-facing brand-voice language — headlines, hero statements, narrative, and CTAs — within approved creative direction. |
 | [`software-development`](.agents/skills/software-development/SKILL.md) | Implementing approved, bounded software changes with scope discipline and validated evidence. |
 | [`testing-and-verification`](.agents/skills/testing-and-verification/SKILL.md) | Independent, evidence-backed verification of implementation claims, defects, and acceptance criteria. |
 
@@ -52,7 +54,7 @@ task-framing
     └─ product-design, only where workflows, IA, forms, transactions, permissions, or interaction-state
        logic require definition
            ↓ (both branches feed forward)
-    visual-design + ux-writing + copywriting (when that skill exists)
+    visual-design + ux-writing + copywriting
     → software-development → testing-and-verification
 
 Mixed website (e.g. a campaign page with one signup form)
@@ -70,12 +72,10 @@ the task's audience, communication objective, content requirements, and user-app
 
 ## Status
 
-- Eight foundational skills installed and stable as of this writing — no further architectural changes unless
+- Nine foundational skills installed and stable as of this writing — no further architectural changes unless
   real use surfaces a concrete defect.
-- `copywriting` has an authorized responsibility boundary (promotional, persuasive, campaign, editorial, and
-  public-facing brand-voice language, consuming approved `creative-direction` output) but is not yet built.
-- The next identified gap beyond that is specialist frontend implementation — particularly authored interaction
-  and motion — which is currently handled generically by `software-development`.
+- The next identified gap is specialist frontend implementation — particularly authored interaction and motion —
+  which is currently handled generically by `software-development`.
 
 ## Using these skills
 

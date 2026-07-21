@@ -223,7 +223,7 @@ Before claiming the interface-copy package complete:
 - [ ] **Localization check**: Localization and text expansion are considered where applicable.
 - [ ] **No Marketing Drifts**: Final copy does not drift into promotional copy.
 - [ ] **Observable Criteria**: Language criteria are observable.
-- [ ] **Handoff Clarity**: Behavioral ambiguities go to `product-design`; spatial and hierarchy conflicts go to `visual-design`; policy, legal, naming, consent, pricing, and public-meaning decisions go to `task-framing` and the appropriate authorized owner; implementation-ready strings go to `software-development`; observable language criteria go to `testing-and-verification`; promotional or campaign writing goes to `copywriting` when that skill exists.
+- [ ] **Handoff Clarity**: Behavioral ambiguities go to `product-design`; spatial and hierarchy conflicts go to `visual-design`; policy, legal, naming, consent, pricing, and public-meaning decisions go to `task-framing` and the appropriate authorized owner; implementation-ready strings go to `software-development`; observable language criteria go to `testing-and-verification`; promotional or campaign writing goes to `copywriting`.
 - [ ] **Exclusions & Assumptions Check**: Assumptions and exclusions are documented.
 - [ ] **No Placeholders**: No TODOs, accidental placeholders, or unresolved drafting markers remain. Clearly defined metavariables (such as `<object-name>`) are permitted.
 - [ ] **Link Verification**: Apply link verification only when the task creates or modifies links.
