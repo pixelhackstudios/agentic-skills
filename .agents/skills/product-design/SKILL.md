@@ -179,7 +179,7 @@ Every criterion should identify, where applicable:
 - relevant failure, recovery, or permission behaviour.
 
 Criteria must describe product behaviour rather than implementation or aesthetics.
-- *Prefer*: "A coach can identify clients requiring attention without opening each client record."
+- *Prefer*: "A user can identify records requiring attention without opening each record."
 - *Avoid*: "Render red cards with a React map.", "Make the dashboard intuitive.", "Use a beautiful responsive layout."
 
 ## Decision Classification
@@ -212,40 +212,40 @@ This hierarchy resolves conflicts among workspace instructions and skill documen
 > Named execution skills, commands, files, paths, users, products, or workflows in these examples are hypothetical unless explicitly identified as existing.
 
 ### Example 1: Bounded Workflow Improvement (Archiving)
-- **Task**: Improve client-archiving workflow in a coaching portal (hypothetical).
+- **Task**: Improve the record-archiving workflow in a hypothetical record-management system.
 - **Controlling Evidence**: Project product definitions establish that "archive" means a reversible status change rather than hard deletion. (If deletion-versus-archival semantics were unresolved, it would be a Material Product Decision).
 - **Classification**: Bounded Product Decision (workflow details governed by conventions).
 - **Proposed Workflow**:
-  - Actor: Coach.
-  - Entry Point: Client detail page.
-  - Sequence: Click to *initiate archive* -> system displays a confirmation dialog. Click to *confirm archive* -> client status set to "Archived", client removed from active dashboard, system shows success feedback.
+  - Actor: Authorized staff member.
+  - Entry Point: Record details page.
+  - Sequence: Click to *initiate archive* -> system displays a confirmation dialog. Click to *confirm archive* -> record status set to "Archived", record removed from the active record list, system shows success feedback.
   - Alt Path: Click to *cancel* -> modal closes, state remains unchanged.
   - Visual/Copy handoff: Specify that a confirmation check and feedback are required. Exact button labels and confirmation wording belong to UX writing unless already supplied and approved. Modal layout is handed to visual design.
 
-### Example 2: Information Hierarchy for a Coach Alert Dashboard
-- **Task**: Define information hierarchy for a coach alert dashboard.
+### Example 2: Information Hierarchy for a Record Alert Dashboard
+- **Task**: Define information hierarchy for a record alert dashboard.
 - **Design Boundary**: The specification details what information must be grouped and prioritized, avoiding aesthetic layout details:
-  1. **Primary Grouping**: Clients requiring immediate feedback (unreviewed check-ins). This section must be persistent and prominently ordered at the top.
-  2. **Secondary Grouping**: Clients with milestone anniversaries this week. This section is collapsible.
-  3. **Content Requirement**: Each alert item must expose the client's name, alert age (time elapsed), and a link to the check-in record.
+  1. **Primary Grouping**: Records requiring immediate feedback (unreviewed submissions). This section must be persistent and prominently ordered at the top.
+  2. **Secondary Grouping**: Records approaching a scheduled status deadline this week. This section is collapsible.
+  3. **Content Requirement**: Each alert item must expose the record's name, alert age (time elapsed), and a link to the related submission.
   4. **No styling leak**: Hand visual realization and layout composition to visual design.
 
 ### Example 3: Workflow Blocked by Unresolved Permissions / Data-Ownership Policy
-- **Task**: Allow coaches to share client records with other coaches.
+- **Task**: Allow authorized staff to share records with other authorized staff.
 - **Analysis**:
-  - Exposes customer privacy questions: Does sharing grant read-only or read-write access? Can the shared coach invite other coaches? Who retains ownership if the original coach account is closed?
+  - Exposes privacy questions: Does sharing grant read-only or read-write access? Can a staff member who receives access invite other staff? Who retains ownership if the original staff account is closed?
 - **Classification**: Material Product Decision (Blocked).
 - **Action**: Stop execution. Report:
   - *Completed*: Identified actors, sharing entry point, required permission questions, visibility consequences, revocation needs, and ownership-policy gaps.
   - *Blocker*: User authorization is required for read/write permissions, onward sharing, revocation, and ownership after account closure.
 
 ### Example 4: Proposed Feature Requiring Reframing Approval
-- **Task**: "Add a chat bot to the client dashboard so they can ask why their coach hasn't responded."
+- **Task**: "Add a chat bot to the workspace so users can ask why their service request hasn't received a response."
 - **Analysis**:
-  - Stated user problem: Clients feel anxious when coaches take more than 24 hours to respond.
-  - Chatbot Mismatch: A chatbot may address uncertainty in some form, but it does not itself improve coach response time and may create unsupported claims about availability.
+  - Stated user problem: Users feel anxious when staff take more than 24 hours to respond to a service request.
+  - Chatbot Mismatch: A chatbot may address uncertainty in some form, but it does not itself improve staff response time and may create unsupported claims about availability.
   - Action: Identify the chatbot-responsiveness mismatch and document risks and unsupported assumptions.
-  - Behavioural Alternatives: Propose options such as response-status visibility, expectation-setting (e.g. displaying coach feedback hours), escalation workflows, or automated acknowledgements. Document required product data for each option (e.g., coach schedule configuration or unreviewed check-in timestamps).
+  - Behavioural Alternatives: Propose options such as response-status visibility, expectation-setting (e.g. displaying staff response-time targets), escalation workflows, or automated acknowledgements. Document required product data for each option (e.g., staff availability configuration or unreviewed service-request timestamps).
   - Classification: Material Product Decision (Replacing or choosing the requested chatbot approach changes agreed scope).
   - Handoff: Return the decision, consequences, and behavioural alternatives to `task-framing` or user approval. Do not assume schedules exist and do not write final interface copy.
 ```

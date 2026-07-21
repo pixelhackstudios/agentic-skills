@@ -118,7 +118,7 @@ Distinguish: supplied approved wording; current interface wording; framework or 
 
 ## Interface-Action Language
 Action labels must communicate the action or immediate outcome accurately.
-- *Prefer*: “Archive client”, “Save changes”, “Send invitation”, “Try again”.
+- *Prefer*: “Archive record”, “Save changes”, “Send invitation”, “Try again”.
 - *Avoid*: “Yes”, “Submit”, “Continue” (when the consequence is specific and material).
 - Labels must not conceal deletion, payment, publication, sharing, or irreversible effects.
 
@@ -200,9 +200,9 @@ Produce, as applicable (do not describe strings as “approved” unless approva
 
 ## UX-Writing Acceptance Criteria
 Criteria must be observable and behaviourally accurate:
-- **Destructive warning confirmation**: “The destructive confirmation identifies the client record affected and states that archived clients can be restored.”
+- **Destructive warning confirmation**: “The destructive confirmation identifies the record affected and states that archived records can be restored.”
 - **Associated validation rules**: “The validation message states the actual email-format requirement and remains associated with the relevant field.”
-- **Restricted resources disclosure**: “The permission message does not reveal whether a restricted client record exists.”
+- **Restricted resources disclosure**: “The permission message does not reveal whether a restricted record exists.”
 - *Avoid*: “Sounds friendly.”, “Feels clear.”, “Has good UX.”
 
 ## Validation Gates
@@ -282,12 +282,12 @@ This hierarchy resolves conflicts among workspace instructions and skill documen
 
 ### Example 1: Destructive Confirmation Language
 - **Task**: Replace vague destructive confirmation modal wording.
-- **Prerequisites**: Approved product behaviour confirms that deletion is permanent, identifies that only the client record is deleted, and confirms that no recovery or undo exists.
+- **Prerequisites**: Approved product behaviour confirms that deletion is permanent, identifies that only the record is deleted, and confirms that no recovery or undo exists.
 - **Wording Specification**:
-  - Title: “Delete client record?”
-  - Body: “This permanently deletes the client record. This action cannot be undone.”
-  - Primary action: “Delete client”
-  - Safe alternative: “Keep client”
+  - Title: “Delete record?”
+  - Body: “This permanently deletes the record. This action cannot be undone.”
+  - Primary action: “Delete record”
+  - Safe alternative: “Keep record”
   - Visual handoff: Specify strings. Do not prescribe "warning styling" or visual treatments; route visual treatment to `visual-design`.
 
 ### Example 2: Validation Wording from Rules
@@ -299,19 +299,19 @@ This hierarchy resolves conflicts among workspace instructions and skill documen
 
 ### Example 3: Replace a technical save-failure message shown to the user
 - **Task**: Replace a technical save-failure message shown to the user.
-- **Controlling evidence**: The request failed, the client record was not saved, and retry safety is unknown.
+- **Controlling evidence**: The request failed, the record was not saved, and retry safety is unknown.
 - **Specification**:
-  - Error text: “We couldn’t save the client record. Your changes have not been saved.”
+  - Error text: “We couldn’t save the record. Your changes have not been saved.”
   - Avoids exposing internal port, database naming (PostgreSQL), stack traces, or inventing causes ("temporarily unavailable", "wait a moment") or retry safety.
 
 ### Example 4: Terminology Consistency Check
-- **Task**: Resolve inconsistent labels in client workflow.
-- **Analysis**: The project's approved terminology system mandates `Client` as the single term. Consistency does not require identical grammatical form on every surface.
+- **Task**: Resolve inconsistent labels in a record workflow.
+- **Analysis**: The project's approved terminology system mandates `Record` as the single term. Consistency does not require identical grammatical form on every surface.
 - **Specification**:
-  - Navigation label: “Clients”
-  - Page heading: “Clients”
-  - Action label: “Archive client”
-  - Confirmation title: “Archive client?”
+  - Navigation label: “Records”
+  - Page heading: “Records”
+  - Action label: “Archive record”
+  - Confirmation title: “Archive record?”
   - Do not rename a modal to an action phrase unless the modal's actual purpose supports it.
 
 ### Example 5: Writing Request Blocked by Unresolved Policy
@@ -320,6 +320,6 @@ This hierarchy resolves conflicts among workspace instructions and skill documen
 - **Action**: Stop drafting. Return the unresolved data-sharing meaning to `task-framing` so the task can identify and obtain a decision from the authorized product, privacy, policy, or legal owner. UX writing must not draft consent language until the underlying disclosure and authorized source are established.
 
 ### Example 6: Text Size Conflict Handled
-- **Task**: Fit "Confirm client archival" button label on a mobile viewport.
+- **Task**: Fit "Confirm record archival" button label on a mobile viewport.
 - **Visual constraint**: Visual layout indicates button text must be under 12 characters.
 - **Action**: First attempt an approved shorter term. If no accurate term fits, return the spatial conflict to `visual-design`. Return to `product-design` only if resolving it requires changing action hierarchy, disclosure placement, or interaction behaviour. Do not shorten a consequential label until it becomes ambiguous.

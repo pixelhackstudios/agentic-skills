@@ -157,7 +157,7 @@ Visual design determines presentation, not state logic or final wording.
 ## Specificity Requirement
 Prohibit unsupported adjectives such as clean, modern, premium, elegant, intuitive, polished, professional, visually appealing. Translate all terms into observable design decisions.
 - *Avoid*: “Make the card more premium.”
-- *Use*: “Increase separation between the metadata and primary action, reduce border contrast, preserve the established corner radius, and use the approved heading role for the client name.”
+- *Use*: “Increase separation between the metadata and primary action, reduce border contrast, preserve the established corner radius, and use the approved heading role for the record name.”
 
 ## Visual Deliverables
 A bounded visual specification or layout package (delivered internally, conversationally, or persisted):
@@ -181,7 +181,7 @@ A bounded visual specification or layout package (delivered internally, conversa
 
 ## Visual Acceptance Criteria
 Criteria must be observable and tied to approved evidence:
-- **Desktop read priority**: "At desktop width, the client identity and current coaching status form the first reading group, while administrative metadata remains visually subordinate."
+- **Desktop read priority**: "At desktop width, the record identity and current status form the first reading group, while administrative metadata remains visually subordinate."
 - **Narrow width actions visibility**: "At narrow widths, primary actions remain available without horizontal page scrolling."
 - **Non-color state indicators**: "Error and success states remain distinguishable without relying on colour alone."
 - *Avoid*: "Looks polished.", "Feels premium.", "Has good spacing.", "Matches the vibe."
@@ -234,13 +234,13 @@ Before claiming the visual specification complete:
 > Named execution skills, commands, files, paths, design systems, screenshots, products, components, fonts, colours, or commands in these examples are hypothetical unless explicitly identified as existing.
 
 ### Example 1: Improving Dashboard Visual Hierarchy
-- **Task**: Improve client-card dashboard visual hierarchy.
+- **Task**: Improve record-card dashboard visual hierarchy.
 - **Controlling Evidence**: The existing approved design system defines `Heading 2`, `Caption`, and secondary-action roles. The approved card pattern permits a trailing action region.
 - **Specification**: Apply those established roles rather than inventing them:
-  - Client name utilizes the `Heading 2` typographic role.
+  - Record name utilizes the `Heading 2` typographic role.
   - Action items are grouped on the card's right-hand side using the secondary action role.
   - Administrative metadata is set to `Caption` role, visually subordinating it against the card background while retaining required legibility and approved contrast constraints.
-  - Preserves behavioral sequence (archiving/viewing client remains identical).
+  - Preserves behavioral sequence (archiving/viewing the record remains identical).
 
 ### Example 2: Reproducing an Approved Screenshot
 - **Task**: Style a custom button based on approved screenshot `./design/spec.png` (hypothetical).
@@ -251,8 +251,8 @@ Before claiming the visual specification complete:
   - Do not infer unshown responsive states, hover interactions, or validation error states from one screenshot.
 
 ### Example 3: Responsive Priority Preservation
-- **Task**: Define responsive adaptation for a client list table.
-- **Prerequisites**: Product design has already classified Client Name, Alerts, and the primary action as required at narrow viewports. Secondary metadata (Last Login, Joined Date) may be collapsed or hidden according to the approved specification. All authorized actions remain available. Breakpoints follow the established responsive scale.
+- **Task**: Define responsive adaptation for a record list.
+- **Prerequisites**: Product design has already classified Record Name, Alerts, and the primary action as required at narrow viewports. Secondary metadata (Last Login, Joined Date) may be collapsed or hidden according to the approved specification. All authorized actions remain available. Breakpoints follow the established responsive scale.
 - **Specification**:
   - At viewports >= 1024px, display all columns in a row.
   - At viewports < 768px, hide secondary metadata and flow actions into an overflow menu using the existing design system breakpoints and overflow-menu pattern.
@@ -267,7 +267,7 @@ Before claiming the visual specification complete:
   - Route material palette, typography, logo, or theme approval to `task-framing`.
 
 ### Example 5: Visual Request Requiring Product-Design Decision
-- **Task**: "Make the client details page fit on one screen without scrolling by moving the client history log into a modal."
+- **Task**: "Make the record details page fit on one screen without scrolling by moving the record history into a modal."
 - **Analysis**: Moving persistent history into a modal changes information visibility, access sequence, discoverability, and comparison behaviour. These are product-design concerns, not merely visual rearrangement.
 - **Action**: Stop execution. Present the mismatch and behavioural alternatives to `product-design` or `task-framing` to obtain authorization.
 ```
