@@ -134,7 +134,7 @@ When evidence conflicts, use the source with the most direct authority over the 
 ## Concrete Usage Examples: Framing Modes
 
 > [!NOTE]
-> All named execution skills and resource paths in these examples are hypothetical. The repository currently contains only `skill-authoring-standard` and `task-framing`.
+> All named execution skills and resource paths in these examples are hypothetical unless explicitly identified as an installed skill. The repository currently contains `skill-authoring-standard`, `task-framing`, `software-development`, `testing-and-verification`, `product-design`, `visual-design`, `ux-writing`, and `creative-direction`.
 
 ### Example 1: Internal Frame Mode (Theme Toggle)
 - **Task**: "Add a theme toggle button to the navbar."

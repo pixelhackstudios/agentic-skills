@@ -265,4 +265,3 @@ This hierarchy resolves conflicts among workspace instructions and skill documen
   - No applicable entries: no permissions, no destructive confirmation, no persisted user data — per the Workflow Model, these are correctly omitted rather than fabricated.
 - **Information Architecture**: Primary grouping is the article body and its immediate supporting media; secondary grouping is related/further-reading links, ordered by relevance rather than recency; no permission-visibility requirement applies.
 - **Visual/Copy handoff**: Hand composition and hierarchy expression to `visual-design`, informed by any approved creative brief; hand headline/deck/body voice to `copywriting` (when that skill exists) rather than `ux-writing`, since this is public-facing editorial language, not interface utility copy.
-```

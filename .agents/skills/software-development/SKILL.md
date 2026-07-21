@@ -50,7 +50,7 @@ This skill governs the inspection, modification, and validation of application s
   - Modifying files unrelated to the task frame.
   - Performing unrelated cleanups, cosmetic edits, or opportunistic refactorings.
   - Silently making material architectural, dependency, schema, security, licensing, or cost decisions.
-  - Independent test strategy, adversarial verification, broad regression design, or quality-policy decisions. These belong to `testing-and-verification` (hypothetical) when that skill exists.
+  - Independent test strategy, adversarial verification, broad regression design, or quality-policy decisions. These belong to `testing-and-verification`.
   - Specialist implementation domains belong to specialist skills like `frontend-development`, `backend-development`, `database-development`, and `infrastructure-development` (hypothetical) when they exist.
 
 ## Ordered Procedure

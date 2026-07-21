@@ -263,4 +263,3 @@ Report the observable consequence. Use severity labels only when the project sup
     - Acceptance criterion: **Failed**
     - Failure classification: **Implementation Defect**
     - Overall verdict: **Not Verified**
-```

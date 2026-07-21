@@ -474,12 +474,11 @@ violated:
 
 ## Rendered Creative Review
 ```text
-task-framing
-    ↓
-product-design
-    ↓
-creative-direction establishes or reuses the thesis
-    ↓
+task-framing (routes according to the task's dominant purpose)
+    ├─ product-design, only when behaviour, workflow, forms, transactions, permissions, or interaction-state
+    │  logic require it
+    └─ creative-direction establishes or reuses the thesis
+           ↓ (both branches feed forward)
 visual-design / ux-writing / copywriting (when that skill exists)
     ↓
 creative-conformance specification review

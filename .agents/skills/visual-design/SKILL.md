@@ -263,7 +263,7 @@ Before claiming the visual specification complete:
 - **Blocker**: Brand strategy, campaign concept, public aesthetic, imagery direction, or expressive tone is unresolved.
 - **Classification**: Material Visual Decision (Blocked).
 - **Handoff**:
-  - Route brand or campaign direction to `creative-direction` when that skill exists.
+  - Route brand or campaign direction to `creative-direction`.
   - Route material palette, typography, logo, or theme approval to `task-framing`.
 
 ### Example 5: Visual Request Requiring Product-Design Decision
@@ -276,4 +276,3 @@ Before claiming the visual specification complete:
 - **Controlling Evidence**: Approved creative brief anti-reference excludes repeating card grids and pill-badge metadata; approved thesis calls for treating the article body and its supporting media as one continuous reading path rather than segmented widgets.
 - **Specification**: Apply an asymmetric single-column measure with margin-anchored captions instead of a sidebar-card pattern; use established type roles for a reading hierarchy (headline, deck, body, caption) without introducing dashboard-style metadata chrome; responsive behavior collapses margin captions inline rather than into an overflow menu, preserving the continuous-reading-path requirement.
 - **No product-design gate required**: The task has no accounts, permissions, or persisted user data; visual-design proceeds directly from the approved creative brief and a bounded visual request, consistent with this skill's Required Inputs, which already permit "a clearly bounded visual request" as an alternative to a product-design specification.
-```

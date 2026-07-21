@@ -158,7 +158,7 @@ Voice is stable. Tone adapts: neutral/direct for routine actions; calm/specific 
   - Do not anthropomorphize the system unless an approved product voice explicitly requires it.
   - Do not use forced personality, excessive enthusiasm, jokes, or emotional reassurance in errors or consequential states.
   - Do not use generic instructions such as “friendly and professional” without translating them into observable language rules.
-- This approved voice, when a public-facing tone concept exists, originates from `creative-direction`'s intended verbal character (when that skill exists) or from supplied brand voice guidance; `ux-writing` executes within it but does not establish it.
+- This approved voice, when a public-facing tone concept exists, originates from `creative-direction`'s intended verbal character or from supplied brand voice guidance; `ux-writing` executes within it but does not establish it.
 
 ## Accessibility and Comprehension
 UX writing may define: visible control labels, accessible names, alternative text when image/control purpose is known, instructions not depending solely on position/color/iconography, error/field associations. It must not claim: accessibility compliance, screen-reader correctness, correct technical association of labels and errors, sufficient contrast/legibility.
