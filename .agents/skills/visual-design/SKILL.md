@@ -159,7 +159,7 @@ Prohibit unsupported adjectives such as clean, modern, premium, elegant, intuiti
 - *Avoid*: “Make the card more premium.”
 - *Use*: “Increase separation between the metadata and primary action, reduce border contrast, preserve the established corner radius, and use the approved heading role for the record name.”
 
-## Visual Deliverables
+## Exact Deliverables
 A bounded visual specification or layout package (delivered internally, conversationally, or persisted):
 - controlling visual evidence;
 - current-state findings;
@@ -227,6 +227,29 @@ Before claiming the visual specification complete:
 - **Fidelity assumptions**: Claiming screenshot fidelity without comparing the relevant states and viewport conditions.
 - **Scope expansion**: Redesigning unrelated surfaces for consistency without task authority.
 - **Priority modification**: Changing visibility, navigation, interaction sequence, or content priority merely to simplify the layout.
+
+## Conflict-Resolution and Evidence Hierarchy
+This hierarchy resolves conflicts among workspace instructions and skill documents. It does not override
+platform-level, system-level, safety, security, or tool-use requirements governing the agent.
+- **Conflict Resolution**:
+  1. User's explicit instructions in the current prompt.
+  2. Workspace rules (`.agents/AGENTS.md`).
+  3. Governing standard (`.agents/skills/skill-authoring-standard/SKILL.md`).
+  4. Individual skill `SKILL.md`.
+  5. Global agent guidelines.
+- **Evidence Hierarchy (Source of Truth)**: Same ordering as
+  [Visual Evidence Hierarchy](#visual-evidence-hierarchy).
+  1. Current explicit user visual instructions and approvals.
+  2. Approved screenshots, prototypes, mockups, and reference assets (screenshots govern visual fidelity).
+  3. Approved design-system tokens, themes, components, and brand assets.
+  4. Product-design hierarchy and behavioural requirements (product specifications govern behavior/info).
+  5. Existing visual patterns that remain applicable.
+  6. Observable rendered output (existing implementation is evidence of current appearance, not automatic
+     visual authority).
+  7. Authoritative accessibility and platform guidance.
+  8. Skill defaults and model assumptions.
+
+  *Note*: Written design prose does not override a later explicit user-approved visual reference.
 
 ## Concrete Usage Examples
 

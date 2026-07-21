@@ -197,6 +197,29 @@ Report the observable consequence. Use severity labels only when the project sup
 8. **Origin**: New, pre-existing, or uncertain.
 9. **Recommended Handoff**: Target discipline (e.g., `software-development`, `frontend-development`, or `backend-development`).
 
+## Conflict-Resolution and Evidence Hierarchy
+This hierarchy resolves conflicts among workspace instructions and skill documents. It does not override
+platform-level, system-level, safety, security, or tool-use requirements governing the agent.
+- **Conflict Resolution**:
+  1. User's explicit instructions in the current prompt.
+  2. Workspace rules (`.agents/AGENTS.md`).
+  3. Governing standard (`.agents/skills/skill-authoring-standard/SKILL.md`).
+  4. Individual skill `SKILL.md`.
+  5. Global agent guidelines.
+- **Evidence Hierarchy (Source of Truth)**:
+  The applicable evidence depends on the discipline; see also [Evidence Classes](#evidence-classes) for the
+  distinct concept of which verification technique produced a given result.
+  1. Explicit user instructions and decisions from the current task.
+  2. Supplied acceptance criteria, screenshots, prototypes, examples, and reference assets.
+  3. Observable behaviour and direct execution evidence.
+  4. Current workspace files, schemas, architecture, and established conventions.
+  5. Tests, compiler output, lint results, and runtime logs where applicable.
+  6. Project documentation.
+  7. External authoritative references.
+  8. Skill defaults and model assumptions.
+
+When evidence conflicts, use the source with the most direct authority over the specific claim.
+
 ## Concrete Usage Examples
 
 > [!NOTE]
