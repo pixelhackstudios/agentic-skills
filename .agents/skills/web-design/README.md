@@ -8,29 +8,74 @@ exact visual specification `visual-design`'s, exact wording `ux-writing`'s and `
 independent verdict `testing-and-verification`'s. See
 [`skill-authoring-standard`](../skill-authoring-standard/SKILL.md) for the class distinction.
 
+## Who consults this document, and when
+
+This router is part of the execution path, not background reading. The framework skills that consume capability
+knowledge are required to consult it before selecting among these skills:
+
+```text
+task request
+    ↓
+task-framing names the applicable capability family (this document) — but selects no individual skill
+    ↓
+creative-direction    → reaching for expressive references or a signature device
+visual-design         → reaching for a visual direction or a treatment technique
+frontend-development  → reaching for an implementation technique or a library
+    ↓
+this router's groups and selection rules
+    ↓
+narrowest applicable skill(s)
+    ↓
+applied within the consuming discipline's existing authority
+```
+
+Each of those three skills carries a `Consuming Capability Skills` section stating this, and a validation gate
+checking it. `frontend-development` activates for any production frontend change, so a request that reaches
+implementation without an upstream design package still passes through this router.
+
+Selecting a skill from this document grants it no authority. Where a capability skill disagrees with an approved
+thesis, specification, reference, design token, or accessibility constraint, the approved source governs.
+
 ## How to select
 
 **Load the narrowest skill that covers the request.** These skills are additive, not comprehensive — three
 technique skills applied to one page is normal; three direction skills is incoherent.
+
+### Groups are not subtypes
+
+The headings below are **routing groups** — they organize skills by what a request needs. A skill's
+**subtype** (`technique`, `direction`, `library`, `workflow`, `foundation`) is a separate axis describing how it
+is authored, defined by [`skill-authoring-standard`](../skill-authoring-standard/SKILL.md). One group can hold
+several subtypes: the page-archetype group below contains `workflow` skills
+(`build-awwwards-quality-sites`, `build-threejs-scroll-worlds`), a `direction` skill
+(`cinematic-scroll-storytelling`), and cross-cutting page knowledge (`landing-page`) — grouped together because
+that is where you look for a page shape, not because they are alike inside.
+
+`archetype` is therefore a routing group here, not a capability subtype. Selection rules below may name either a
+group or a subtype; both are valid subjects for a routing rule.
 
 Precedence, in order:
 
 1. **At most one `direction` skill per project.** Directions are whole-page visual systems and they contradict
    each other by design. If two seem to fit, the request is under-specified — resolve it with
    `creative-direction` before picking one, or pick neither and let the thesis drive the visual system.
-2. **At most one `archetype` skill per page.** Archetypes carry page structure and section sequence.
-3. **`technique` skills combine freely.** They own one mechanism each and are meant to be composed.
-4. **`library` skills load on demand**, when the project actually uses that library.
-5. **Prefer a `technique` skill over a `direction` skill** when the request names a specific effect. "Add a
+2. **At most one page-archetype skill per page.** Archetypes carry page structure and section sequence, and two
+   sequences cannot both be the page.
+3. **A page archetype and a direction may combine.** Their exclusivity scopes differ — archetype per page,
+   direction per project — and one supplies structure while the other supplies the visual system.
+4. **`technique` skills combine freely.** They own one mechanism each and are meant to be composed.
+5. **`library` skills load on demand**, when the project actually uses that library.
+6. **Prefer a `technique` skill over a `direction` skill** when the request names a specific effect. "Add a
    word-by-word headline reveal" is a technique request even inside an editorial project.
-6. **A direction skill is a starting point, not a specification.** It does not replace `visual-design`'s
+7. **A direction skill is a starting point, not a specification.** It does not replace `visual-design`'s
    specification or `creative-direction`'s thesis, and adopting one wholesale produces the interchangeable
    result those skills exist to prevent. Where a direction skill and an approved thesis disagree, the thesis
    governs.
 
 ## Page archetypes — structure and section sequence
 
-Pick at most one. Each carries a page structure, not just a look.
+Routing group. Pick at most one. Each carries a page structure, not just a look; members differ in subtype
+(see [Groups are not subtypes](#groups-are-not-subtypes)).
 
 | The page is | Use |
 |---|---|
@@ -197,3 +242,7 @@ Follow [`skill-authoring-standard`](../skill-authoring-standard/SKILL.md)'s Capa
 Contract, and for a `technique` skill, [`web-technique-to-skill`](../codex/web-technique-to-skill/SKILL.md).
 Add the routing entry in the same change — an unrouted skill competes for activation on description text alone
 and will be selected arbitrarily against its siblings.
+
+Place it in the routing group where someone would look for it, which need not match its subtype. Adding a new
+routing group is a decision this document makes on its own; adding a new capability **subtype** is a change to
+`skill-authoring-standard` and is Material.

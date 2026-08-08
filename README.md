@@ -152,6 +152,20 @@ Copy `.agents/skills/` into a project's root. Each `SKILL.md`'s frontmatter (`Tr
 modify, or audit any skill in this directory — read it before changing the structure of an existing skill or
 adding a new one.
 
+**How capability skills get selected.** Family routing documents are not loaded by skill discovery, so nothing
+would consult them on their own. The path runs through the framework layer instead: `creative-direction`,
+`visual-design`, and `frontend-development` each carry a `Consuming Capability Skills` section requiring
+router consultation before selecting a capability skill, and a validation gate checking it. Those three activate
+from their own frontmatter conditions, so the router enters context as a consequence of normal discipline
+activation rather than needing to be found. `frontend-development` activates for any production frontend change,
+which makes it the backstop: a request that skips design entirely still passes through the router on its way to
+implementation.
+
+This means the framework layer is load-bearing for capability selection. If you adopt `.agents/skills/`
+selectively and omit the framework skills, add the equivalent instruction to your own workspace rules — consult
+the applicable family routing document before choosing among capability skills — or the capability layer will
+be selected by description match, which its overlapping vocabulary does not support.
+
 This repository's root `AGENTS.md` governs maintenance of the Agentic Skills framework itself — it is not
 automatically the operating contract for a project that consumes these skills. A host project should supply its
 own workspace rules appropriate to that project; the reusable package remains `.agents/skills/`.

@@ -48,7 +48,8 @@ plus brand direction and reference assets, into coherent visual specifications a
 - approved screenshots, prototypes, visual references, design-system files, tokens, themes, or brand assets when available;
 - required states, information hierarchy, interaction priorities, and responsive contexts;
 - existing interface surfaces and visual conventions relevant to the task;
-- supplied copy or clearly marked content requirements.
+- supplied copy or clearly marked content requirements;
+- the applicable capability-family routing document (for web work, [`web-design/README.md`](../web-design/README.md)) when reaching for installed visual-direction or treatment-technique capabilities.
 - *Note*: Not all inputs must exist; explicitly identify missing material visual decisions.
 
 ## Authority Boundaries
@@ -71,7 +72,7 @@ plus brand direction and reference assets, into coherent visual specifications a
 4. **Analyze Current State**: Analyze the current visual surface where one exists. Inspect only task-relevant visual surfaces. Distinguish approved visual direction, current rendered appearance, current design-system rules, inherited framework defaults, inconsistent/accidental styling, and model assumptions. Identify hierarchy failures, density inconsistencies, contrast/legibility issues, and generic framework defaults.
 5. **Define Visual Hierarchy**: Define the visual hierarchy (primary/secondary/tertiary information and actions, reading order, grouping).
 6. **Define Composition**: Define composition and layout relationships.
-7. **Define Styling**: Define typography, colour, spacing, surfaces, and component treatment within authority.
+7. **Define Styling**: Define typography, colour, spacing, surfaces, and component treatment within authority. When reaching for installed capability skills for a direction or a specific treatment, consult the applicable capability-family routing document first and select from it, per [Consuming Capability Skills](#consuming-capability-skills).
 8. **Define Responsive Adaptations**: Define responsive adaptations.
 9. **Define State Treatment**: Define visual treatment for applicable product states.
 10. **Visual-Comparison Procedure**: When fidelity to a reference is required:
@@ -92,6 +93,27 @@ plus brand direction and reference assets, into coherent visual specifications a
 - Visual design determines how those approved requirements are visually organized, distinguished, emphasized, and adapted.
 - Visual design may identify that a requested treatment conflicts with approved hierarchy, behaviour, accessibility constraints, brand direction, or reference fidelity. It must report the conflict and return it to `product-design` or `task-framing` rather than silently changing the requirements.
 - Visual design may identify when behavioural requirements cannot be visually expressed coherently without violating controlling requirements, but must return the conflict to `product-design` or `task-framing`. It must not change workflow or content requirements to simplify the composition.
+
+## Consuming Capability Skills
+Installed capability skills supply visual directions and treatment techniques this skill may apply. Select them
+through the applicable family routing document (for web work,
+[`web-design/README.md`](../web-design/README.md)) rather than by matching skill descriptions, and honour its
+selection rules — in particular, at most one whole-page visual direction, with treatment techniques combined
+freely.
+
+A capability skill is **input to the specification, never the specification itself**. This skill still produces
+the exact values, hierarchy, states, and responsive behaviour; a direction skill that supplies adjectives rather
+than constants does not discharge the [Specificity Requirement](#specificity-requirement), and its language must
+be translated into observable decisions before it enters a deliverable.
+
+Precedence when sources disagree: an approved `creative-direction` thesis, approved references, design-system
+tokens, product hierarchy, and accessibility or platform constraints all outrank capability guidance. A
+capability skill never justifies a contrast failure, a hierarchy change, or a departure from an approved thesis.
+
+Selecting a capability skill is a bounded visual decision. It becomes a
+[Material Visual Decision](#visual-decision-classification) when what it introduces is itself material — a new
+type system, a new palette, a changed layout paradigm — judged by that consequence rather than by the act of
+selection.
 
 ## Visual Evidence Hierarchy
 The applicable evidence depends on the discipline.
@@ -205,7 +227,8 @@ Before claiming the visual specification complete:
 - [ ] **Product Integrity**: Product workflow has not been altered.
 - [ ] **Annotation Integrity**: Implementation details remain annotations rather than unauthorized code decisions.
 - [ ] **Observable Criteria**: Visual criteria are observable.
-- [ ] **Specificity Check**: Unsupported aesthetic adjectives are absent.
+- [ ] **Specificity Check**: Unsupported aesthetic adjectives are absent, including any inherited from a capability skill rather than translated into observable decisions.
+- [ ] **Capability Selection Path**: Where installed capability skills were applied, they were selected through the applicable family routing document and its selection rules, no more than one whole-page direction was adopted, and no capability guidance overrode an approved thesis, reference, token, or accessibility constraint.
 - [ ] **Handoff Clarity**: Implementation annotations, UX-writing needs, verification criteria, behavioural conflicts, and unresolved material visual decisions are routed to the correct downstream discipline.
 - [ ] **Exclusions & Assumptions Check**: Assumptions and exclusions are documented.
 - [ ] **No Placeholders**: No TODOs, accidental placeholders, or unresolved drafting markers remain. Clearly defined metavariables (such as `<theme-color>`) are permitted.

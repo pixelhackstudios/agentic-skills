@@ -67,6 +67,54 @@ Capability skills have subtypes, each of which may have its own body-authoring s
 Do not impose one body structure across subtypes. The seven `gsap-*` skills are correct *because* they preserve
 a technical-reference shape; rewriting them into mechanism-extraction form would degrade them.
 
+## Capability Routing
+
+Capability skills are selected through their family's **routing document** (for web-design capabilities,
+`.agents/skills/web-design/README.md`). Description matching alone does not discriminate among dozens of
+skills whose descriptions share vocabulary, so a family with overlapping skills requires a router.
+
+### Subtypes and Routing Groups Are Different Axes
+
+Keep these distinct; conflating them is the most likely source of confusion for a future author.
+
+- A **subtype** classifies what a skill *is*, and therefore how it is **authored**. The five subtypes above are
+  the complete set.
+- A **routing group** classifies what a *request needs*, and therefore how skills are **selected**. Routing
+  groups are defined by a family's router, and a single group may contain skills of several subtypes.
+
+The web-design router's "page archetypes" group is the clearest example: it contains `workflow` skills
+(`build-awwwards-quality-sites`, `build-threejs-scroll-worlds`), a `direction` skill
+(`cinematic-scroll-storytelling`), and cross-cutting page knowledge (`landing-page`) — grouped together because
+a user picking a page shape looks in one place, not because they are authored alike.
+
+Adding a routing group is a router-level decision requiring no change here. Adding a **subtype** is a change to
+this standard and is Material, because a subtype implies a distinct body-authoring standard. Do not promote a
+routing group to a subtype merely because it has its own selection rule; promote it only when its members share
+authoring requirements the existing subtypes cannot express.
+
+### What a Routing Document Owns
+
+- the routing groups for its family, and which skills belong to each;
+- **selection rules**, including exclusivity ("at most one direction per project", "at most one page-archetype
+  skill per page") and combination rules;
+- nearest-neighbour distinctions between skills a request could plausibly match either way;
+- known overlaps not yet resolved, so an agent can route around them.
+
+A routing document owns **selection**, never **authority**. Selecting a capability skill does not give it
+standing over a controlling framework output; where a capability skill and an approved specification or thesis
+disagree, the approved output governs.
+
+### Consumption Requirement
+
+A framework skill that consumes capability knowledge must consult the applicable family routing document before
+choosing among capability skills, rather than selecting on description match. The framework skills that consume
+capability knowledge, and the point at which each does so, are stated in their own Ordered Procedures —
+`creative-direction` when reaching for expressive references, `visual-design` when reaching for visual direction
+or treatment technique, and `frontend-development` when reaching for implementation technique or a library.
+
+`task-framing` may identify the applicable **family** when routing a task; it does not select individual
+capability skills, which would make it a technique router and duplicate the disciplines' own authority.
+
 ## Capability Skill Integration Contract
 
 The minimum a capability skill must satisfy to participate safely in this framework. Each requirement exists to
@@ -91,11 +139,16 @@ prevent an observed failure; do not add requirements for structural symmetry wit
    independent verification), state that the framework skill governs and this skill supplies technique within
    it. Required only where the overlap actually exists.
    *Prevents:* a capability skill silently taking ownership of a governed discipline.
-6. **Provenance** — one line naming where the skill came from: an official vendor source, an extracted project
-   technique, or original authorship. Strip client names, project names, personal repository paths, and
-   hard-coded asset paths from the skill body.
-   *Prevents:* stale vendor guidance being trusted as current, and unportable skills that assume one machine's
-   directory layout.
+6. **Provenance** — one line stating where the knowledge came from and what conditions it held up under: an
+   official vendor source (name it — vendor identity is what makes it checkable and datable), an extracted
+   technique (describe the *kind* of work and the constraints it survived), or original authorship.
+   Describe **context, not identity**: a reusable skill must not carry a project name, client name, personal
+   repository name or path, hard-coded asset path, or unrelated brand in its body. Everything a reader needs
+   survives the substitution — "extracted from an owned editorial WebGL project where the effect had to stay
+   legible behind display type" answers their question; the project's name does not.
+   *Prevents:* stale vendor guidance being trusted as current; unportable skills that assume one machine's
+   directory layout; and skills that read as one project's documentation rather than as reusable knowledge.
+   For `technique` skills, `codex/web-technique-to-skill` states this rule in the same terms.
 7. **Motion lifecycle** — any capability skill whose output animates must state its `prefers-reduced-motion`
    behaviour (render a designed still frame; do not merely hide the effect), and its pause/teardown behaviour
    on `document.hidden`, viewport exit, and unmount.

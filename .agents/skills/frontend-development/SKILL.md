@@ -115,6 +115,9 @@ performance, and approved motion — as the specialist execution authority opera
 - Existing frontend codebase architecture, conventions, and design-token/component-library setup.
 - Accessibility, platform, browser-support, and performance constraints, when supplied or governed by project
   convention.
+- The applicable capability-family routing document (for web work,
+  [`web-design/README.md`](../web-design/README.md)) when reaching for installed implementation-technique or
+  library capabilities.
 - Repository/worktree baseline state.
 - *Note*: Not all inputs must exist. A bounded frontend task with no upstream specification package — a minor
   markup correction, an accessibility fix, or a maintenance change — grounds directly in the task frame, approved
@@ -183,7 +186,12 @@ referencing another file:
    upstream package, ground directly in the task frame, approved current behaviour, and established conventions
    instead.
 4. **Trace Implementation Surface**: Trace affected components, routes, rendering paths (SSR/hydration/client),
-   data-fetch integration, imports, and dependencies.
+   data-fetch integration, imports, and dependencies. When the approved requirements call for an implementation
+   technique or library this codebase does not already establish, consult the applicable capability-family
+   routing document and select from it per
+   [Consuming Capability Skills](#consuming-capability-skills) — do not select on description match, and do not
+   improvise a technique an installed capability skill already documents with real constants and known failure
+   modes.
 5. **Classify Proposed Changes**: Classify every proposed change as Mechanical, Bounded, or Material per
    [Frontend Change Classification](#frontend-change-classification).
 6. **Define Smallest Complete Change**: Define the smallest complete implementation that satisfies the approved
@@ -363,6 +371,33 @@ Bounded here. Where the approved concept still does not determine the exact auth
 open authority question and returns to `task-framing` — a delegation broadens who may decide the concept, not
 whether this skill may invent the choreography.
 
+## Consuming Capability Skills
+Installed capability skills supply implementation technique and library knowledge — real constants, lifecycle
+requirements, and the failure modes each mechanism has. Select them through the applicable family routing
+document (for web work, [`web-design/README.md`](../web-design/README.md)) rather than by matching skill
+descriptions, and honour its selection rules.
+
+Reaching for a capability skill is the preferred path when one covers the mechanism: it carries tuned values and
+documented gotchas that inspection of the codebase will not supply. Reaching for one does **not** widen this
+skill's authority:
+- a capability skill never overrides an approved product, creative, visual, or copy specification — where they
+  disagree, the approved output governs and the capability guidance yields;
+- a capability skill does not authorize originating a signature device, choreography, or interaction model that
+  no approved specification establishes; selecting a technique is not the same as deciding the experience uses
+  it;
+- a capability skill does not supply accessibility policy, a browser-support matrix, or a performance budget —
+  those still come from supplied requirements or authoritative platform constraints, per
+  [Implementation-Proximate Accessibility and Performance Boundary](#implementation-proximate-accessibility-and-performance-boundary).
+
+Applying a capability skill within established architecture and approved requirements is Bounded. It becomes
+Material when what it introduces is material on its own terms — a new dependency, a new design-token system, a
+new interaction model — classified by that consequence per
+[Frontend Change Classification](#frontend-change-classification), not by the act of selection.
+
+Where a capability skill states lifecycle requirements (reduced-motion behaviour, visibility pausing, teardown,
+budget caps), implement them; they are part of the mechanism, and omitting them produces the exact defects this
+skill's own validation gates check for.
+
 ## Creative Conformance Self-Check
 Whenever an approved creative-direction thesis exists, `frontend-development` self-checks its own implementation
 against the thesis, anti-references, signature devices, and coherence rules as part of its own ordered
@@ -491,6 +526,9 @@ Before claiming the frontend implementation complete:
 - [ ] **Motion Boundary Check**: Motion implementation stayed within approved or convention-supported bounds; a
       new choreography or interaction model was not originated, and any such need was returned to `task-framing`
       for authority determination rather than routed automatically and solely to `creative-direction`.
+- [ ] **Capability Selection Path**: Where installed capability skills were applied, they were selected through
+      the applicable family routing document, their stated lifecycle requirements were implemented, and none was
+      treated as authorizing a decision an approved specification did not establish.
 - [ ] **Accessibility Escalation Accuracy**: Accessibility choices were classified Material only when they
       changed supported behaviour, keyboard/focus contracts, accommodation scope, dependencies, or interaction
       contracts.

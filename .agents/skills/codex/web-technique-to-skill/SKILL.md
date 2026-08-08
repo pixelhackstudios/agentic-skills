@@ -82,7 +82,13 @@ Report the lever that buys the most for the least — for a recycled particle fi
 
 ## Record where the design came from
 
-Write one line in `SKILL.md` naming the source: what the project was, and what the mechanism was doing in it. A reader decides whether the skill applies to them by understanding the context it survived — "extracted from a dark WebGL Kyoto night scene where it had to stay legible over type" tells them more than any amount of description.
+Write one line in `SKILL.md` describing the source **environment and constraints** — what kind of work it was, and what the mechanism had to survive in it. A reader decides whether the skill applies to them by understanding the conditions it held up under: "extracted from a dark WebGL night scene where it had to stay legible over display type and hold density through resize" tells them more than any amount of description.
+
+**Describe the context, not the identity.** Do not carry the project's name, the client's name, a personal repository name or path, or an unrelated brand into the skill body — a reusable skill that names one project reads as that project's documentation, and the name answers none of the questions a reader actually has. Everything useful about provenance survives the substitution: what kind of surface it was, what constraints applied, what evidence supports reuse.
+
+- Weak (identity, no context): "Extracted from the Tidal Commons site."
+- Weak (context, but unverifiable): "Extracted from a demanding production build."
+- Strong: "Extracted from an owned editorial WebGL project where the particle field had to stay legible behind large display type and hold stable density across a resize."
 
 The demo should look like that source — see **Direct the demo** below. What stays behind is only what you do not own: a client's name and brand, licensed fonts, purchased or third-party imagery. Substitute those and reproduce everything else.
 
@@ -159,7 +165,7 @@ Stage only the new folder and the gallery rows it needs. Review `git diff --cach
 - [ ] Constants are real numbers, not adjectives
 - [ ] The expensive gotchas are written symptom-first
 - [ ] The boundary against the nearest existing skill is stated in the opening lines
-- [ ] Provenance is one line of context naming the source project
+- [ ] Provenance is one line describing the source environment and its constraints, carrying no project, client, repository, or brand name
 - [ ] The demo is recognisably the reference — same palette, type, composition, atmosphere
 - [ ] The reference's own asset generators were ported, not approximated
 - [ ] Nothing unowned crossed over, and the demo ships as one file

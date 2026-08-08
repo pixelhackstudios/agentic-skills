@@ -65,6 +65,11 @@ This skill governs the initial scoping, boundary definition, and mode selection 
    - **Reported Frame**: If the task is complex but executable, briefly report the important boundaries in the response and proceed.
    - **Approval-Required Frame**: Stop and request a decision only when an unresolved material choice prevents valid execution.
 8. **Select Execution Destination**: Identify the downstream discipline or skill. For a task that produces or modifies a web surface, determine whether product behaviour, workflows, information architecture, forms, transactions, permissions, or interaction-state logic are involved, and to what extent. Route the overall project according to its dominant purpose; invoke `product-design` only for the specific surfaces or behaviours that actually need workflow, state, transaction, permission, form, or interaction definition. When a task mixes an expressive or public surface with one or more bounded interactive elements, split it into parallel concerns — `creative-direction` for the overall concept, `product-design` narrowly for the interactive element's behaviour — rather than forcing the entire surface through a single sequential, product-design-led pipeline. Do not default to `product-design` merely because the deliverable is a website or contains any interactive element.
+   Where the work will need installed capability knowledge, name the applicable capability **family** and its
+   routing document (for web work, [`web-design/README.md`](../web-design/README.md)) so the receiving discipline
+   knows where to select from. Do not select individual capability skills here — technique and direction
+   selection belongs to `creative-direction`, `visual-design`, and `frontend-development` within their own
+   authority, and choosing for them would duplicate it.
 9. **Handoff & Proceed**: Hand off or proceed according to the selected mode.
 
 ## Evidence Requirements
@@ -92,7 +97,7 @@ Before proceeding:
 - [ ] **Delegation Recorded**: Where the user granted creative latitude, the envelope names its receiving discipline(s), delegated categories, and retained categories — it is not recorded as unbounded creative freedom.
 - [ ] **Delegation Scope Integrity**: No non-delegable category (product behaviour, accessibility scope, security/privacy, public or legal claims, pricing, naming/positioning beyond the granted scope, architecture, or performance policy) was absorbed into the envelope, and no implementation discipline received creative origination authority.
 - [ ] **Acceptance Evidence**: Acceptance criteria and completion evidence are directly observable.
-- [ ] **Destination Check**: Identify an appropriate discipline, execution mode, current agent workflow, or existing skill without inventing a skill as though it exists.
+- [ ] **Destination Check**: Identify an appropriate discipline, execution mode, current agent workflow, or existing skill without inventing a skill as though it exists. Where capability knowledge will be needed, the applicable capability family and its routing document are named; individual capability skills are left to the receiving discipline to select.
 - [ ] **No Placeholders**: No TODOs, accidental placeholders, unfinished template text, or unresolved drafting markers remain. Clearly defined metavariables (such as `<skill-name>`) are permitted.
 - [ ] **Link Verification**: All file links resolve correctly. Prefer repository-relative links; use absolute links only when explicitly required or justified.
 

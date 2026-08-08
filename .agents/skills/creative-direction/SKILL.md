@@ -135,6 +135,8 @@ affect the established expressive identity.
 - Accessibility, platform, behavioural, and technical constraints supplied by other disciplines.
 - Downstream specifications (`visual-design`, `ux-writing`, and `copywriting`) when running the conformance gate.
 - A rendered implementation or observable artifact when running rendered creative review.
+- The applicable capability-family routing document (for web work, `.agents/skills/web-design/README.md`) when
+  reaching for installed expressive or technique capabilities to inform the thesis.
 - *Note*: Not all inputs must exist; explicitly identify missing information that prevents grounding the thesis.
 
 ## Authority Boundaries
@@ -189,6 +191,9 @@ affect the established expressive identity.
 6. **Define and Classify Signature Devices**: Propose signature devices at the concept level and classify each
    per [Creative Decision Classification](#creative-decision-classification) and its specialization in
    [Signature Device Classification](#signature-device-classification). Route material devices to `task-framing`.
+   When reaching for installed capability skills to inform a device or reference, consult the applicable
+   capability-family routing document first and select from it, per
+   [Consuming Capability Skills](#consuming-capability-skills) — do not select on description match.
 7. **Define Cross-Disciplinary Coherence Rules**: Define how typography, imagery, motion, interaction, copy,
    sound, and space relate to express the thesis consistently.
 8. **Define Creative Acceptance Criteria**: Define observable, falsifiable creative criteria the thesis implies.
@@ -448,6 +453,28 @@ Every creative thesis must translate into consequences that can guide downstream
 Define what the thesis emphasizes, suppresses, repeats, contrasts, permits, prohibits, makes memorable, and
 requires across disciplines.
 
+## Consuming Capability Skills
+Installed capability skills (technique, direction, library, workflow, and foundation skills — see
+`skill-authoring-standard`'s Capability Routing section) may inform the thesis: they show what a mechanism can
+actually do, what it costs, and where it fails.
+
+When reaching for them:
+- consult the applicable family routing document first (for web work,
+  [`web-design/README.md`](../web-design/README.md)) and select from its groups and selection rules, rather than
+  matching skill descriptions;
+- honour the router's exclusivity rules — in particular, do not adopt more than one whole-page visual direction;
+- treat a capability skill as **evidence about what is achievable**, never as the thesis. A direction skill
+  describes a look that already exists elsewhere; adopting one wholesale produces exactly the interchangeable
+  result this skill exists to prevent, and is a finding under the
+  [Anti-Generic Standard](#anti-generic-standard-operational);
+- where a capability skill and an approved brief entry, product constraint, or accessibility requirement
+  disagree, the controlling source governs and the capability guidance yields.
+
+Selecting a capability skill is a bounded decision. It becomes Material when the capability it introduces
+carries a material consequence of its own — a new dependency, a new interaction model, a performance-budget
+change — in which case the [classification](#creative-decision-classification) applies to that consequence, not
+to the act of selection.
+
 ## Bounded Proactive Reference Research
 Begin with:
 - approved product behaviour;
@@ -575,6 +602,9 @@ Before claiming a creative-direction pass complete:
       "modern," "beautiful," "bold," "immersive") without translated, observable consequences.
 - [ ] **Anti-Pattern Justification**: Any use of a listed generic pattern carries a documented, thesis-specific
       rationale, and any rejection cites the actual observable pattern rather than the summary label alone.
+- [ ] **Capability Selection Path**: Where installed capability skills informed the thesis, they were selected
+      through the applicable family routing document and its selection rules, not by description match, and no
+      capability skill was treated as the thesis itself.
 - [ ] **Creative Quality Check**: A full exercise establishes why the concept belongs to this product, what
       should be remembered, what category conventions it rejects or transforms, how it affects downstream
       disciplines, and how coherence will be reviewed. It either defines a justified differentiating device,
