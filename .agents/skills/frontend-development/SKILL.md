@@ -307,6 +307,15 @@ A local accessibility implementation choice is not automatically Material. It be
 changes supported behaviour, keyboard/focus contracts, accommodation scope, dependencies, or established
 interaction contracts.
 
+**A Delegated Creative Authority envelope does not extend to this skill.** When the task frame records a
+creative delegation (see `task-framing`'s [Delegated Creative Authority](../task-framing/SKILL.md) section),
+that authority flows to `creative-direction` and `visual-design`, which originate and specify the expressive
+result; `frontend-development` then implements their approved output. This skill's classification boundaries
+are unchanged by a delegation: originating a signature device, a new interaction model, or a brand-defining
+motion language remains Material and still returns to `task-framing`. A broadly delegated frame will typically
+produce a *richer approved specification* to implement — not broader implementation authority. Implementing an
+ambitious approved specification faithfully is this skill's contribution to an ambitious result.
+
 ## Semantic HTML and Browser Behaviour
 `frontend-development` owns semantic element selection and document structure, not merely "rendered markup" in
 the abstract:
@@ -346,6 +355,13 @@ character; `visual-design` may resolve only visual presentation aspects already 
 owns exact choreography absent explicit authorization — the exact treatment may require explicit user
 authorization or may remain unresolved while Milestone 3 gathers real implementation evidence.
 `frontend-development` does not select the missing authority itself.
+
+A Delegated Creative Authority envelope does not close this seam. It authorizes `creative-direction` to
+originate motion *character, concept, and meaning* without escalating each one, which resolves most cases: a
+delegated frame usually yields an approved motion concept specific enough to implement, and implementing it is
+Bounded here. Where the approved concept still does not determine the exact authored sequence, that remains an
+open authority question and returns to `task-framing` — a delegation broadens who may decide the concept, not
+whether this skill may invent the choreography.
 
 ## Creative Conformance Self-Check
 Whenever an approved creative-direction thesis exists, `frontend-development` self-checks its own implementation

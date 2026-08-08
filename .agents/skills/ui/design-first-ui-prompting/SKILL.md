@@ -1,11 +1,18 @@
 ---
 name: design-first-ui-prompting
-description: Use when you need design-first, spec-driven, skimmable prompts for UI generation. Covers prompt structure, constraints, variations, typography/spacing rules, and iteration workflow for consistent UI outputs.
+description: Write spec-driven prompts for an image-generation model producing static UI mockups, concept boards, or design comps at a fixed canvas size. Covers prompt skeletons, one-variable-at-a-time variation, negative prompts, and a two-pass workflow that typesets real text separately. Use only when the deliverable is a generated image; do not use when building an actual web interface in code.
 ---
 
 # Design-First UI Prompting Skill
 
-This skill is for **design-first prompting**: turn fuzzy ideas into a tight spec that produces consistent UI.
+This skill is for **prompting an image-generation model** to produce static UI mockups and concept imagery at a
+fixed canvas size.
+
+> **Boundary — do not use this skill to build a real interface.** Its output is a prompt for an image model,
+> not markup, styles, or components. When the deliverable is a working web surface, the applicable skills are
+> `visual-design` for the specification, [`web-design/README.md`](../../web-design/README.md) for craft
+> selection, and `frontend-development` for implementation. The typography guidance here is calibrated for
+> image generation (where models misspell text and text is often typeset in a second pass), not for the web.
 
 ## Core principle
 **Prompt like a design system, not a wish.**

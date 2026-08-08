@@ -67,8 +67,10 @@ Before creating, editing, deleting, or restructuring any file in this repository
 
 | Repository task | Mandatory loading |
 |---|---|
-| Create, modify, or audit a skill | `skill-authoring-standard` and every skill directly or semantically affected |
+| Create, modify, or audit a **framework** skill | `skill-authoring-standard` and every skill directly or semantically affected |
+| Create, modify, or audit a **capability** skill | `skill-authoring-standard` (for the Capability Skill Integration Contract and the applicable subtype standard), the family's routing document, and the nearest neighbouring capability skills |
 | Change cross-skill authority, activation, or handoffs | `skill-authoring-standard`, `task-framing`, and every affected skill |
+| Add, remove, or re-route a capability skill within a family | The family routing document and the affected sibling skills; `skill-authoring-standard` when the skill file itself is created or modified |
 | Update `README.md` or `ROADMAP.md` claims | No skill is strictly mandatory, but every changed claim must be grounded in the actual current skills and repository state, not memory |
 | Add repository validation scripts or tooling | `software-development` as the governing implementation baseline; `testing-and-verification` only when conducting a distinct independent verification pass |
 | Record, assess, or integrate real-world validation findings into this repository | `task-framing` when reopening a foundational skill is under consideration; the specific skill(s) the finding concerns |
@@ -94,7 +96,15 @@ Material (Section 7) and requires explicit authorization — never disguise a ch
 documentation cleanup.
 
 Do not invent a mandatory skill that is not one of the installed skills under `.agents/skills/`. Do not treat a
-skill proposed in `ROADMAP.md`'s "Future skills" list as though it is installed.
+skill proposed in `ROADMAP.md`'s "Future skills" list, or listed there as a candidate capability gap, as though
+it is installed.
+
+The installed set is larger than the ten framework skills: `.agents/skills/` also contains the capability layer
+described in `README.md`. Inspect the directory to establish what is installed; do not assume either the
+framework list or a routing document is exhaustive. A capability skill being installed does not mean it
+satisfies the Capability Skill Integration Contract — that layer is being brought up to the contract
+incrementally under `ROADMAP.md` Milestone 8, and structural conformance must be verified per file rather than
+assumed from installation.
 
 ## 5. Pre-Change Report
 
@@ -146,17 +156,24 @@ competing one:
   is already established in the repository.
 - **Bounded**: a reversible clarification within already-settled authority and repository policy.
 - **Material**: a change to skill ownership, activation, routing, conflict-resolution priority,
-  material-decision authority, the installed-skill inventory, required handoff relationships, release policy,
-  validation policy, or the meaning of a roadmap milestone. A documentation edit may be Material because of
-  *what* it changes, not merely because it edits a repository-state claim.
+  material-decision authority, the installed framework-skill inventory, required handoff relationships, release
+  policy, validation policy, the skill-class model or the Capability Skill Integration Contract, or the meaning
+  of a roadmap milestone. A documentation edit may be Material because of *what* it changes, not merely because
+  it edits a repository-state claim.
+  - Adding, removing, or re-routing a **capability** skill within an existing family is Bounded, provided it
+    changes no framework authority and the family routing document is updated in the same change. It becomes
+    Material if it changes which discipline owns a responsibility, introduces a new capability subtype, or adds
+    a dependency or policy the framework layer would otherwise have to authorize.
 
 Examples of material framework changes that require authorization through `task-framing` or the user before
 implementation, never silently resolved during a "cleanup" pass:
 - changing which skill owns a responsibility;
 - changing activation in a way that alters project routing;
 - changing conflict-resolution priority;
-- changing material-decision authority;
-- adding or removing an installed skill;
+- changing material-decision authority, including the scope of Delegated Creative Authority or which
+  disciplines may receive it;
+- adding or removing an installed framework skill;
+- changing the skill-class model or the Capability Skill Integration Contract;
 - changing a required handoff relationship;
 - declaring the motion-skill boundary (`ROADMAP.md` Milestone 3) resolved;
 - moving or renaming the authoritative `AGENTS.md` contract without updating every skill's workspace-rules
@@ -183,8 +200,10 @@ granted), do not report the installation as complete — report the specific rem
 
 ## 9. README and ROADMAP Synchronization
 
-`README.md` describes the current framework, installed skills, routing overview, and usage. `ROADMAP.md`
-distinguishes completed, active, planned, and possible work — it is expected to contain planned and merely
+`README.md` describes the current framework, both classes of installed skill, routing overview, and usage.
+Family routing documents (`web-design/README.md`, `game-development/README.md`) are the authoritative inventory
+for their capability families — keep them accurate rather than duplicating their contents into `README.md`.
+`ROADMAP.md` distinguishes completed, active, planned, and possible work — it is expected to contain planned and merely
 possible items, and that alone is not a staleness defect.
 
 - Ground every changed claim in the actual current skills and repository state; verify before writing, don't
@@ -192,7 +211,9 @@ possible items, and that alone is not a staleness defect.
 - Never represent planned or possible work as installed, completed, or validated.
 - Completed or active status must trace to repository evidence, not memory or intention.
 - Never update an installed-skill count or inventory from memory — inspect the actual `.agents/skills/`
-  directory.
+  directory. State counts by class; a single total conflates ten governed framework skills with a capability
+  layer that is still being brought up to its contract.
+- Never describe capability-layer conformance from framework-layer validation, or vice versa.
 - Structural validation and real-world validation remain distinct; never describe one as proof of the other.
 - Do not change a `ROADMAP.md` milestone's status without the repository evidence that justifies the new status.
 - Do not require a documentation update when no documented claim actually became stale.
@@ -201,7 +222,11 @@ possible items, and that alone is not a staleness defect.
 
 Apply the checks proportionate to the change; not every check applies to every task:
 - YAML frontmatter parsing (all touched `SKILL.md` files);
-- required-section presence (per `skill-authoring-standard`);
+- skill-class determination for every touched `SKILL.md`, and the class-appropriate gates from
+  `skill-authoring-standard` — required-section presence for framework skills, Capability Skill Integration
+  Contract items for capability skills. Do not report a capability skill as failing validation for lacking
+  framework sections it is not required to carry;
+- routing-document coverage and accuracy for any capability skill added, removed, or renamed;
 - in-file anchor resolution;
 - Markdown fence balance;
 - repository-relative link resolution;
@@ -274,6 +299,10 @@ Do not:
   demonstrates;
 - claim independent verification (`testing-and-verification`'s exclusive authority) from implementation
   self-validation (`software-development`/`frontend-development`'s authority);
+- apply framework-skill structural requirements to a capability skill, or describe a capability skill as
+  non-compliant for lacking sections its class does not require;
+- add a capability skill without a routing entry, or treat "installed" as evidence that a capability skill
+  satisfies the integration contract;
 - treat existing prose or implementation as automatically authoritative over more direct evidence (a current
   file, a run command's actual output).
 

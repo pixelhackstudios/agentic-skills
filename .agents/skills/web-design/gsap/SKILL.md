@@ -5,6 +5,20 @@ description: Use when you need to add or debug professional web animations with 
 
 # GSAP (GreenSock) — Web Animation Skill
 
+> **Superseded for API guidance.** The seven installed `gsap-*` skills are the current, maintained reference:
+> [`gsap-core`](../../gsap-core/SKILL.md), [`gsap-timeline`](../../gsap-timeline/SKILL.md),
+> [`gsap-scrolltrigger`](../../gsap-scrolltrigger/SKILL.md), [`gsap-react`](../../gsap-react/SKILL.md),
+> [`gsap-plugins`](../../gsap-plugins/SKILL.md), [`gsap-utils`](../../gsap-utils/SKILL.md), and
+> [`gsap-performance`](../../gsap-performance/SKILL.md). Prefer them for anything API-level.
+>
+> Two specific corrections to the guidance below:
+> - **React cleanup:** prefer the `useGSAP()` hook from `@gsap/react`, which handles cleanup and provides
+>   `contextSafe` for callbacks. `gsap.context()` + `ctx.revert()` is the fallback when `useGSAP` is
+>   unavailable, not the primary recommendation. See [`gsap-react`](../../gsap-react/SKILL.md).
+> - **Plugins:** every GSAP plugin is free, including formerly Club-only plugins such as SplitText and
+>   MorphSVG. No membership, licence key, or auth token is required. See
+>   [`gsap-plugins`](../../gsap-plugins/SKILL.md).
+
 ## When to use
 - High-quality UI/motion design: entrances, micro-interactions, page transitions
 - Timeline-based sequences (vs. scattered CSS transitions)

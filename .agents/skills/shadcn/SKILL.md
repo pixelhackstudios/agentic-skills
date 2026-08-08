@@ -9,6 +9,24 @@ allowed-tools: Bash(npx shadcn@latest *), Bash(pnpm dlx shadcn@latest *), Bash(b
 
 A framework for building ui, components and design systems. Components are added as source code to the user's project via the CLI.
 
+## Relationship to authored design
+
+The rules below govern **component internals and their conventions** — do not fight a shadcn component's own
+colour, typography, or stacking behaviour from the outside, because doing so breaks theming, dark mode, and
+overlay layering. They do **not** govern the page.
+
+Page-level layout, composition, type scale, spacing rhythm, palette, imagery, and motion remain authored, and
+are owned by `visual-design` under `creative-direction`'s approved thesis. A page assembled entirely from
+unmodified shadcn defaults is a framework default, not a design — which `creative-direction`'s Anti-Generic
+Standard and `frontend-development`'s Framework-Default Substitution prohibition both identify as a failure.
+There is no conflict between these positions: honour component internals, author the page.
+
+When an approved visual specification requires a treatment a component cannot express through its variants and
+semantic tokens, the supported path is to **customize the token layer or fork the component into the project's
+own source** — shadcn components are source you own — not to override them from `className`. See
+[customization.md](./customization.md) for the theming and CSS-variable layer, which is where most authored
+visual direction should land.
+
 > **IMPORTANT:** Run all CLI commands using the project's package runner: `npx shadcn@latest`, `pnpm dlx shadcn@latest`, or `bunx --bun shadcn@latest` — based on the project's `packageManager`. Examples below use `npx shadcn@latest` but substitute the correct runner for the project.
 
 ## Current Project Context

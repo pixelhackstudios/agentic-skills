@@ -353,6 +353,29 @@ A decision that establishes or materially changes:
 Material creative decisions require authorization through `task-framing`. This skill must not apply a material
 amendment merely because it classified or proposed it.
 
+### Under a Delegated Creative Authority Envelope
+When the current task frame records a Delegated Creative Authority envelope (see `task-framing`'s
+[Delegated Creative Authority](../task-framing/SKILL.md) section), the categories it delegates to
+`creative-direction` are recorded as **authorized bounded decisions**, with the delegation as their explicit
+authority basis, rather than escalated. This is the same mechanism
+[Approval-Status Integrity](#approval-status-integrity) already defines for any controlling source that grants
+this skill authority over a reversible class of decision — the delegation is that grant, made explicit.
+
+Every other Material category is unaffected and continues to escalate. In particular, a creative delegation
+does not authorize establishing brand identity, product positioning, or product naming beyond the scope the
+delegation names; does not authorize changing the accessibility approach or supported-user scope; and does not
+authorize a public claim, a performance-budget change, or an implementation-architecture change. The thesis
+still adapts to accessibility, platform, behavioural, safety, performance, and technical constraints — never
+the reverse.
+
+Under a delegation, the [Creative Quality Criteria](#creative-quality-criteria) restraint clause still applies
+in both directions: restraint remains a legitimate outcome, but it must be justified by the product-specific
+thesis rather than chosen because it is the lower-risk option. Defaulting to category convention without a
+thesis-specific reason is a conformance finding under a delegated frame.
+
+Record the delegation as the authority basis on each resulting entry, so a later reader can distinguish a
+decision authorized by delegation from one the user approved individually.
+
 ## Signature Device Classification
 This is a specialized application of [Creative Decision Classification](#creative-decision-classification) to
 signature devices specifically. Signature devices are not automatically bounded — classify each proposed device
@@ -570,6 +593,11 @@ Before claiming a creative-direction pass complete:
 - [ ] **Approval-Status Integrity**: Every creative entry records its status and authority basis. Model-authored
       work is not treated as approved by authorship alone, while bounded decisions explicitly authorized by the
       task frame are not unnecessarily escalated.
+- [ ] **Delegation Scope**: Where a Delegated Creative Authority envelope applies, only the categories it
+      delegates were treated as authorized bounded decisions; each records the delegation as its authority
+      basis; and no retained or non-delegable category was absorbed into it.
+- [ ] **Delegated Ambition**: Under a delegation, any conventional or restrained outcome carries a
+      thesis-specific justification rather than being adopted as the lower-risk default.
 - [ ] **Controlling-Evidence Integrity**: Only supplied-approved entries and task-authorized bounded decisions are
       handed to downstream disciplines as controlling creative evidence; newly proposed, unresolved, rejected, or
       superseded entries are marked non-controlling.

@@ -1,24 +1,7 @@
-# Agent Web Design Skills (draft set)
+# Web Design Skills — Inventory
 
-These are portable AgentSkills focused on **web design** (motion, 3D, UI styling, interactive embeds).
+The authoritative inventory and selection guide for this family is [`README.md`](README.md). It routes every
+installed web-design capability skill by intent and states the precedence rules for combining them.
 
-Included skills
-- `gsap/` — timelines, ScrollTrigger, stagger, SPA cleanup
-- `threejs/` — scene/camera/renderer, loaders, performance, disposal
-- `tailwindcss/` — utility-first patterns, responsive/state variants, dynamic class safety
-- `css-border-gradient/` — gradient border utility using a masked pseudo-element
-- `css-alpha-masking/` — horizontal or vertical edge fades with mask-image gradients
-- `progressive-blur/` — layered backdrop blur gradient from top or bottom
-- `animation-on-scroll/` — IntersectionObserver-triggered scroll-reveal animations
-- `matterjs/` — Matter.js 2D physics engine setup and patterns
-- `globe-gl/` — globe.gl 3D globe data visualization patterns
-- `vantajs/` — animated WebGL backgrounds + cleanup
-- `cobejs/` — lightweight interactive globe
-- `unicorn-studio/` — embed patterns, performance knobs, site-builder pitfalls
-
-Each folder contains:
-- `SKILL.md`
-- `REFERENCES.md` (doc links)
-
-Location
-- `agent-skills/web-design/`
+This file previously listed a twelve-skill draft set. That list is superseded and has been removed rather than
+maintained in parallel — two inventories of the same directory drift, and the stale one gets trusted.

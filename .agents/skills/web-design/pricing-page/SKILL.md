@@ -9,6 +9,13 @@ Design a pricing page that helps visitors **choose** and feel good about it.
 Your job is not to “show prices.”
 Your job is to **reduce uncertainty**.
 
+> **Boundary.** This skill supplies page-structure and plan-presentation patterns. It does not own the
+> disciplines it touches: `copywriting` owns final public-facing wording; `product-design` owns plan
+> entitlements, billing behaviour, upgrade/downgrade flows, and their states; `visual-design` owns the exact
+> visual specification. **Prices, plan limits, billing terms, and refund or trial policy are supplied
+> facts, never invented here** — an incorrect price is a material public claim, not a layout detail. Reach for
+> [`landing-page`](../landing-page/SKILL.md) when the page's job is a single offer rather than plan selection.
+
 ## Before you design/write
 Gather (ask if missing):
 

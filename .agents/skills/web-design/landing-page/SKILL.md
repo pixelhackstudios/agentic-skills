@@ -9,6 +9,14 @@ A landing page is not a homepage.
 A homepage serves multiple intents.
 A landing page wins one intent: **one offer → one audience → one primary action**.
 
+> **Boundary.** This skill supplies page-structure patterns and conversion technique. It does not own the
+> disciplines it touches: `copywriting` owns final public-facing wording and may not present an unverified
+> claim as verified; `product-design` owns any signup, checkout, or trial behaviour and its states;
+> `visual-design` owns the exact visual specification; `creative-direction` owns the expressive thesis, and
+> where one is approved it governs over this skill's default structure. Use the patterns here as input to
+> those disciplines, not as a replacement for them. Reach for
+> [`pricing-page`](../pricing-page/SKILL.md) when the page's job is plan selection rather than a single offer.
+
 ## Before you design/write
 Gather (ask if missing):
 

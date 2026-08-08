@@ -12,7 +12,8 @@ Build a cohesive, memorable site whose visual idea, media, typography, and motio
 - Inspect the user's reference evidence completely before implementation. Extract only high-level traits such as hierarchy, pacing, contrast, image treatment, and motion principles.
 - Generate a materially new identity, layout, copy system, imagery, and interaction language. Never reuse, trace, or closely reproduce reference assets, screenshots, source code, identity, or copy.
 - Use Aura.build top asset imagery only when the user requests it or it is relevant and available. Treat it as high-level inspiration, not an asset library.
-- Select and name at least one compatible installed web-design skill. Follow the smallest relevant set and avoid combining unrelated aesthetic systems.
+- Select and name the installed web-design skills you will use, following the precedence rules in [`web-design/README.md`](../README.md): at most one visual direction, at most one page archetype, technique skills combined freely. Follow the smallest relevant set and never combine two direction skills.
+- Where an approved `creative-direction` thesis or `visual-design` specification exists, it governs. A direction skill is a starting reference, not a substitute for either — adopting one wholesale produces the interchangeable result this skill exists to avoid.
 - Write a compact direction before coding: visual thesis, hero focal asset, type hierarchy, color system, section sequence, motion narrative, chosen smooth-scroll engine, Three.js decision, and asset provenance plan.
 
 ## 2. Build an honest asset system
@@ -32,8 +33,8 @@ Build a cohesive, memorable site whose visual idea, media, typography, and motio
 
 ## 4. Build the motion system
 
-- Use GSAP as the primary animation system.
-- Evaluate Lenis and Locomotive Scroll, then choose exactly one as the site's sole smooth-scroll engine. Never install or initialize both. Connect the chosen engine correctly to GSAP ScrollTrigger, refresh measurements after media and font changes, and destroy it during cleanup.
+- Use GSAP as the primary animation system. Consult the installed `gsap-*` skills for API detail rather than working from memory.
+- Choose exactly one smooth-scroll engine and never install or initialize two. Default to **ScrollSmoother** — it is free, ships with GSAP, shares ScrollTrigger's measurement pass, and adds no dependency to a stack that already uses GSAP. Choose **Lenis** when the project needs smooth scroll without GSAP, or when a Lenis integration already exists. Do not select Locomotive Scroll for new work. Whichever is chosen, connect it correctly to ScrollTrigger, refresh measurements after media and font changes, and destroy it during cleanup.
 - Bypass smooth scrolling and scrubbed timelines under `prefers-reduced-motion: reduce`. Render final states immediately instead of merely shortening animations.
 - Choreograph the page section by section. Reveal major headings word by word with a restrained stagger, then sequence supporting copy and media.
 - Preserve an unsplit accessible name for staggered text. Hide decorative split words from assistive technology, never split links or meaningful inline markup, and keep the unsplit content visible without JavaScript.

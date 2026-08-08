@@ -43,9 +43,20 @@ The current framework provides:
 
 The foundation should not be broadly redesigned unless real use exposes a concrete defect.
 
-All ten installed skills currently pass `skill-authoring-standard`'s structural validation (10/10) — required
-sections, frontmatter, and anchors are complete and consistent. Structural validation is distinct from
-real-world validation: the latter (Milestone 4) is active and not yet complete.
+All ten installed framework skills currently pass `skill-authoring-standard`'s framework-skill structural
+validation (10/10) — required sections, frontmatter, and anchors are complete and consistent. Structural
+validation is distinct from real-world validation: the latter (Milestone 4) is active and not yet complete.
+
+### Capability layer
+
+A second class of skill is installed: 137 capability skills across `web-design/` (82), `game-development/` (20),
+`codex/` (19), `gsap-*` (7), `vercel-*` (5), `shadcn`, `ui/`, and `media/`. These supply craft, technique,
+library knowledge, visual direction, and reusable workflows; they execute within the framework layer's authority
+rather than defining authority themselves.
+
+They were imported in bulk and are being brought up to `skill-authoring-standard`'s Capability Skill Integration
+Contract incrementally. **Installed does not mean conformant for this layer.** Known defects are catalogued in
+`skills-assessment-report.md` and tracked in Milestone 8 below.
 
 ---
 
@@ -195,6 +206,13 @@ Potential separate skill:
 A separate skill should be created only if real implementation work demonstrates that motion has enough distinct
 procedure, authority, and verification requirements to justify independent ownership.
 
+**Delegated Creative Authority does not close this seam.** A delegation authorizes `creative-direction` to
+originate motion character, concept, and meaning without escalating each decision, which resolves most cases in
+practice. Where an approved motion concept still does not determine the exact authored sequence, the authority
+over that exact treatment remains open and returns to `task-framing`. That residual is the evidence this
+milestone is waiting on: if real work repeatedly hits it, the case for `motion-development` is made; if the
+delegation route resolves it in practice, the case is not.
+
 ### Capability requirements
 
 Whether implemented inside `frontend-development` or separately, the framework must support:
@@ -343,6 +361,65 @@ A breaking change includes:
 
 ---
 
+## Milestone 8 — Capability-Layer Integration
+
+**Status:** Active
+
+The capability layer was imported in bulk and integrated only partially. `skills-assessment-report.md` contains
+the full evidence; this milestone tracks the work.
+
+### Completed
+
+- Framework/capability class distinction defined in `skill-authoring-standard`, with class-scoped validation
+  gates and a Capability Skill Integration Contract.
+- `web-design/` routing document created, covering all 82 skills with precedence rules; the stale twelve-skill
+  inventory in `WEB-DESIGN-SKILLS.md` superseded rather than maintained in parallel.
+- Delegated Creative Authority formalized in `task-framing` and recognized by `creative-direction` and
+  `visual-design`, without extending creative origination to implementation disciplines.
+- Direct contradictions resolved: shadcn component-mechanics versus authored page design; the superseded local
+  `gsap` skill versus the current `gsap-*` family; smooth-scroll engine selection; `landing-page` and
+  `pricing-page` versus `copywriting`/`product-design` ownership; `design-first-ui-prompting` false activation
+  on real interface work.
+
+### Outstanding, in priority order
+
+1. **Reduced-motion coverage.** 36 of 82 `web-design/` skills produce animation with no `prefers-reduced-motion`
+   path, so their output fails `frontend-development`'s own validation gate. The contract now requires it; the
+   existing skills do not yet satisfy it.
+2. **Empty sections.** 26 skills contain an empty `## Workflow` heading. Mechanical, but each is a skill whose
+   procedure was never written.
+3. **Direction-skill quality.** The direction family specifies its targets in adjectives rather than constants.
+   Rewrite to carry real values (scale, tracking, spacing, radii, motion timing) before consolidating — the
+   routing document currently marks them as mood references, not specifications.
+4. **Consolidation.** Classify the direction skills by actual mechanism overlap, separate true directions from
+   techniques mis-filed as directions, and merge only where semantic overlap is verified. The family groupings
+   in the routing document are a hypothesis for this work, not an approved partition.
+5. **Duplicate clusters.** `masked-reveal`/`staggered-word-reveal`; the scroll-storytelling group; the framed-
+   container group. Routed around for now, not resolved.
+6. **Subtype authoring standards.** `direction`, `workflow`, and `foundation` subtypes have no body standard.
+   Author them from evidence once the rewrite work above shows what those skills actually need.
+7. **Provenance and portability.** Strip project-specific names and hard-coded paths (`Tidal Commons`,
+   `Vesperfall`, `articles/YYYY-MM-DD-*`) per `AGENTS.md` §13.
+8. **Off-mission families.** `game-development/` (20 skills, internally coherent and well-routed),
+   React Native, Apple-platform profiling, TTS, and personal social-content workflows are outside this
+   repository's stated scope and add activation noise. Relocation — not deletion — pending a decision.
+
+### Candidate capability gaps
+
+Recorded from the assessment; **not** approved for creation. Adding skills to a partially-integrated collection
+would worsen the selection problem this milestone exists to fix. Re-evaluate after the outstanding work above.
+
+- `typographic-systems` — no installed skill covers modular scale ratios, measure, tracking compensation at
+  display sizes, or font-loading strategy.
+- `colour-systems` — no installed skill covers ramp construction or contrast computation; exactly one file in
+  the repository states a numeric contrast ratio.
+- `web-performance-budgets` — `frontend-development` requires performance evidence but refuses to invent
+  budgets, and no skill supplies them, making the requirement unsatisfiable by default.
+- `rendered-design-review` — craft-level QA (optical alignment, radius nesting, scale integrity at narrow
+  widths) is owned by neither `creative-direction`'s rendered review nor `testing-and-verification`.
+
+---
+
 ## Future skills — evidence required
 
 These are possible future capabilities, not commitments:
@@ -387,11 +464,14 @@ clear.
 ## Current execution order
 
 ```text
-1. Run the three real-world validation project categories through the complete framework.
-2. Capture authored-interaction and motion evidence during those frontend implementations.
-3. Fix only concrete defects exposed by actual use.
-4. Add lightweight validation tooling after the first validation work demonstrates which checks are worth
+1. Complete Milestone 8's outstanding capability-layer integration work, in the listed priority order.
+2. Run the three real-world validation project categories through the complete framework.
+3. Capture authored-interaction and motion evidence during those frontend implementations, including whether
+   Delegated Creative Authority resolves the exact-choreography seam in practice.
+4. Fix only concrete defects exposed by actual use.
+5. Re-evaluate the candidate capability gaps against evidence from that use.
+6. Add lightweight validation tooling after the first validation work demonstrates which checks are worth
    automating.
-5. Expand documentation and examples from validated workflows.
-6. Prepare the first stable release after the roadmap's release gates are satisfied.
+7. Expand documentation and examples from validated workflows.
+8. Prepare the first stable release after the roadmap's release gates are satisfied.
 ```
